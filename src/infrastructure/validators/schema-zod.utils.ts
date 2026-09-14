@@ -16,7 +16,7 @@ export const ZodUtils = Object.freeze({
    * @returns A Zod schema for the command.
    */
   createCommandSchema: (additionalSchema: z.ZodRawShape) => {
-    return baseCommandZodSchema.extend(additionalSchema)
+    return baseCommandZodSchema.extend(additionalSchema).strict()
   },
   /**
    * @description Creates a Zod schema for a query by extending the base query schema with additional properties.
@@ -24,6 +24,6 @@ export const ZodUtils = Object.freeze({
    * @returns A Zod schema for the query.
    */
   createQuerySchema: (additionalSchema: z.ZodRawShape) => {
-    return baseQueryZodSchema.extend(additionalSchema)
+    return baseQueryZodSchema.extend(additionalSchema).strict()
   },
 })
