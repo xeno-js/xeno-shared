@@ -16,6 +16,7 @@ const makeExecutionContext = (): RequestContext => ({
   identity: {
     userId: '123' as unknown as Guid,
     email: 'admin@example.com',
+    name: 'admin',
     tenantId: '456' as unknown as Guid,
     roles: ['admin'],
     permissions: ['read'],
@@ -26,6 +27,11 @@ const makeExecutionContext = (): RequestContext => ({
     userAgent: 'Mozilla/5.0',
     formatIndicator: 'json',
     path: '/api/test',
+    transport: {
+      res: '',
+      req: '',
+    },
+    csrf: undefined,
   },
   tracing: {
     correlationId: 'req-1' as unknown as Guid,
