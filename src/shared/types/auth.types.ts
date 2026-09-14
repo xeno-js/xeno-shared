@@ -42,6 +42,8 @@ export interface AuthClaims {
    */
   readonly email: Optional<string>
 
+  readonly name: Optional<string>
+
   /**
    * The tenant ID associated with the user, if applicable. This is useful in multi-tenant applications to identify which tenant the user belongs to.
   
@@ -108,3 +110,14 @@ export interface Session {
   readonly expiresAt: Optional<number>
   readonly user: AuthClaims
 }
+
+export type Provider =
+  | 'apple'
+  | 'discord'
+  | 'facebook'
+  | 'github'
+  | 'gitlab'
+  | 'google'
+  | 'linkedin'
+  | 'linkedin_oidc'
+  | 'spotify'

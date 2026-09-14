@@ -175,3 +175,11 @@ export interface HttpResponse<TData = unknown> {
    */
   readonly data: TData
 }
+
+export interface CookieOptions {
+  path?: Optional<string>
+  maxAge?: Optional<number>
+  sameSite?: Optional<'lax' | 'strict' | 'none' | boolean>
+  secure?: boolean
+  domain?: Optional<string>
+}

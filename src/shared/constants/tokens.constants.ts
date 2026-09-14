@@ -11,6 +11,7 @@
    */
 export const TOKENS = Object.freeze({
   ALLOW_ORIGIN: 'ALLOW_ORIGIN',
+  ALLOW_METHOD: 'ALLOW_METHOD',
   /** @description Token used to register and resolve the AuthorizationPipeline instance in the dependency injection container.
    *
    * @author Xeno
@@ -27,6 +28,8 @@ export const TOKENS = Object.freeze({
    * @link https://github.com/Mattia-Carcione/xeno-js
    */
   AUTH_SERVICE: 'AUTH_SERVICE',
+
+  BASE_AUTH_SERVICE: 'BASE_AUTH_SERVICE',
   /** @description Token used to register and resolve the BearerTokenExtractor instance in the dependency injection container.
    *
    * @author Xeno
@@ -259,6 +262,12 @@ export const TOKENS = Object.freeze({
    * @link https://github.com/Mattia-Carcione/xeno-js
    */
   MIDDLEWARE: 'MIDDLEWARE',
+  AUTH_MIDDLEWARE: 'AUTH_MIDDLEWARE',
+  CSRF_MIDDLEWARE: 'CSRF_MIDDLEWARE',
+  METHOD_CHECK_MIDDLEWARE: 'METHOD_CHECK_MIDDLEWARE',
+  OPTIONS_MIDDLEWARE: 'OPTIONS_MIDDLEWARE',
+  REQUEST_CONTEXT_MIDDLEWARE: 'REQUEST_CONTEXT_MIDDLEWARE',
+  RATE_LIMITER_MIDDLEWARE: 'RATE_LIMITER_MIDDLEWARE',
   /** @description Token used to register and resolve the IServiceResilience instance in the dependency injection container.
    *
    * @author Xeno

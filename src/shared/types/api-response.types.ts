@@ -186,4 +186,4 @@ export interface ErrorResponseDto {
   readonly spanId: Optional<string>
 }
 
-type ApiResponseDto<T = unknown> = SuccessResponseDto<T> | ErrorResponseDto
+export type ApiResponseDto<T = unknown> = SuccessResponseDto<T> | ErrorResponseDto

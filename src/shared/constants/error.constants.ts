@@ -137,7 +137,9 @@ export const ERROR_CODES = Object.freeze({
    */
   PIPELINE_NOT_AVAILABLE: 'PIPELINE_NOT_AVAILABLE',
 
-  NOT_ALLOWED: 'METHOD_NOT_ALLOWED'
+  NOT_ALLOWED: 'METHOD_NOT_ALLOWED',
+
+  TOO_MANY_REQUESTS: 'TOO_MANY_REQUESTS',
 } as const)
 
 /** @description Inferred union of every valid ERROR_CODES value.
@@ -323,4 +325,5 @@ export const ERROR_CODE_MESSAGES: Record<ErrorCode, string> = Object.freeze({
   [ERROR_CODES.HANDLER_NOT_FOUND]: 'errors.handler_not_found',
   [ERROR_CODES.PIPELINE_NOT_AVAILABLE]: 'errors.pipeline_not_available',
   [ERROR_CODES.NOT_ALLOWED]: 'errors.method_not_allowed',
+  [ERROR_CODES.TOO_MANY_REQUESTS]: 'errors.too_many_requests',
 } as const)

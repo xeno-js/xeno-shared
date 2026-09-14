@@ -82,6 +82,8 @@ export interface Metadata {
    * @link https://github.com/Mattia-Carcione/xeno-js
    */
   readonly returnAddress: Optional<string>
+
+  readonly csrf: Optional<string>
   /** An optional sequence object that can be used for managing message sequencing in distributed systems.
    *
    * @author Xeno
