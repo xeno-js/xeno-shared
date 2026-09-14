@@ -24,7 +24,7 @@ export interface IMiddleware<THeaders = unknown> {
    * @link https://github.com/Mattia-Carcione/xeno-js
    */
   execute<T>(
-    req: { method: HttpMethod; path: string },
+    req: { method: HttpMethod; path: string; transport: { req: unknown; res: unknown } },
     headers: THeaders,
     next: () => Promise<ResponseDto<T>>,
   ): Promise<ResponseDto<T>>

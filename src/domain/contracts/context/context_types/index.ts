@@ -1,4 +1,3 @@
-export type * from './execution-context.types'
 export type * from './identity-context.types'
 export type * from './messaging-context.types'
 export type * from './network-context.types'

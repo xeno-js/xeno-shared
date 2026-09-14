@@ -38,6 +38,8 @@ export interface Identity {
    */
   readonly email: Optional<string>
 
+  readonly name: Optional<string>
+
   /** @description The tenant ID associated with the user.
    *
    * @author Xeno

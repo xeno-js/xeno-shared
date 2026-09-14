@@ -211,6 +211,16 @@ export class AppError extends Error {
     })
   }
 
+  public static notSupported(name: string, message: string): AppError {
+    return AppError.create({
+      code: ERROR_CODES.NOT_ALLOWED,
+      message: ERROR_CODE_MESSAGES[ERROR_CODES.NOT_ALLOWED],
+      status: STATUS_CODES.NOT_ALLOWED,
+      name,
+      cause: new Error(message),
+    })
+  }
+
   /** @description Creates an AppError instance representing a forbidden access error. This method is used to generate a standardized error response when a user attempts to access a resource or perform an action that they are not authorized to access, even if they are authenticated.
    * @param name The name of the error, typically the class name or context where the error occurred. This helps in identifying the source of the error in logs and error reports.
    * @param message A custom message describing the reason for the forbidden access. This message is included in the AppError's cause for detailed error reporting.

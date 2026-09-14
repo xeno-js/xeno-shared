@@ -49,4 +49,8 @@ export interface NetworkContext {
    * @link https://github.com/Mattia-Carcione/xeno-js
    */
   readonly path: Optional<string>
+
+  readonly csrf: Optional<string>
+
+  readonly transport: Optional<{ req: unknown; res: unknown }>
 }
