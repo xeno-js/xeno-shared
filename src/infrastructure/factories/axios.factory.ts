@@ -22,7 +22,7 @@ export class AxiosFactory implements IFactory<HttpClientConfig, IHttpClient> {
       timeout: config.timeoutMs,
       maxRedirects: config.maxRedirects ?? 5,
       decompress: config.decompress ?? true,
-      proxy: false,
+      proxy: config.proxy,
       withCredentials: config.withCredentials,
     })
 

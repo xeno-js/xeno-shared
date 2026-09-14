@@ -138,16 +138,26 @@ export const StringHelper = Object.freeze({
    * @since 2025-09-30
    * @link https://github.com/Mattia-Carcione/xeno-js 
    */
-  getSingleValue(value: Optional<string | string[]>): Optional<string> {
-    if(!Guards.isDefined(value))
-      return value
-    
+  getSingleValue(
+    value: Optional<string | string[]>,
+    separator?: Optional<string>,
+  ): Optional<string> {
+    if (!Guards.isDefined(value)) return value
+
     if (Guards.isArray(value)) {
       if (Guards.isNullOrEmpty(value)) {
         return undefined
       }
+      if (Guards.isDefined(separator))
+        return StringHelper.getSingleValueWithSplit(value[0], separator)
       return value[0]
     }
+    if (Guards.isDefined(separator)) return StringHelper.getSingleValueWithSplit(value, separator)
+    return value
+  },
+
+  getSingleValueWithSplit(value: string, separator: string): string {
+    if (value.includes(separator)) return value.split(separator)[0].trim()
     return value
   },
 } as const)

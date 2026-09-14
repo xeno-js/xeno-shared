@@ -48,4 +48,16 @@ export interface HttpClientConfig {
   decompress: Optional<boolean>
 
   withCredentials: Optional<boolean>
+
+  proxy: ProxyConfig | false
+}
+
+export interface ProxyConfig {
+  host: string
+  port: number
+  auth?: {
+    username: string
+    password: string
+  }
+  protocol?: string
 }
