@@ -6,7 +6,6 @@ export {
   AxiosHttpClient,
   CacheKeyBuilder,
   InMemoryCache,
-  RemoteDataSource,
   StorageHelper,
   SupabaseAuthService,
   SupabaseClaimsMapper,
