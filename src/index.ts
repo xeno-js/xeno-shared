@@ -5,7 +5,6 @@ export {
   AxiosFactory,
   AxiosHttpClient,
   CacheKeyBuilder,
-  CockatielResilienceFactory,
   InMemoryCache,
   RemoteDataSource,
   StorageHelper,

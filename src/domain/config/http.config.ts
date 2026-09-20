@@ -35,29 +35,121 @@ export interface HttpClientConfig {
    */
   timeoutMs: Optional<number>
 
-  /** Abilita il riutilizzo delle connessioni TCP per ridurre la latenza dei retry (Default: true) */
+  /** @description Optional keep-alive configuration for the HTTP client.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   keepAlive: Optional<boolean>
 
-  /** Numero massimo di socket simultanei per host (Default: 100) */
+  /** @description Optional maximum number of sockets to be used by the HTTP client.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   maxSockets: Optional<number>
 
-  /** Numero massimo di redirect consentiti prima di lanciare errore (Default: 5) */
+  /**
+   * @description Optional maximum number of redirects to follow for the HTTP client.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   maxRedirects: Optional<number>
 
-  /** Abilita la decompressione automatica di gzip/brotli per risparmiare banda (Default: true) */
+  /**
+   * @description Optional flag to enable or disable automatic decompression of response bodies.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   decompress: Optional<boolean>
 
+  /**
+   * @description Optional flag to enable or disable sending credentials (cookies, authorization headers, or TLS client certificates) with cross-origin requests.
+   */
   withCredentials: Optional<boolean>
 
+  /**
+   * @description Optional proxy configuration for the HTTP client.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   proxy: ProxyConfig | false
 }
 
+/**
+ * @description Configuration interface for HTTP client settings, defining parameters such as timeouts, headers, and proxy configurations.
+ *
+ * @author Xeno
+ * @version 1.0.0
+ * @since 2025-09-30
+ * @link https://github.com/Mattia-Carcione/xeno-js
+ */
 export interface ProxyConfig {
+  /**
+   * @description The hostname or IP address of the proxy server.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   host: string
+  /**
+   * @description The port number of the proxy server.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   port: number
+  /**
+   * @description Optional authentication credentials for the proxy server.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   auth?: {
+    /**
+     * @description The username for the proxy server.
+     *
+     * @author Xeno
+     * @version 1.0.0
+     * @since 2025-09-30
+     * @link https://github.com/Mattia-Carcione/xeno-js
+     */
     username: string
+    /**
+     * @description The password for the proxy server.
+     *
+     * @author Xeno
+     * @version 1.0.0
+     * @since 2025-09-30
+     * @link https://github.com/Mattia-Carcione/xeno-js
+     */
     password: string
   }
+  /**
+   * @description The protocol to use for the proxy server (e.g., 'http', 'https').
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   */
   protocol?: string
 }
