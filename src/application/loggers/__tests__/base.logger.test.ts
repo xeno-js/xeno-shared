@@ -32,6 +32,7 @@ const makeExecutionContext = (): RequestContext => ({
       req: '',
     },
     csrf: undefined,
+    origin: 'http://localhost:3000',
   },
   tracing: {
     correlationId: 'req-1' as unknown as Guid,

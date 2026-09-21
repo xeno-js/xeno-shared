@@ -82,8 +82,22 @@ export interface Metadata {
    * @link https://github.com/Mattia-Carcione/xeno-js
    */
   readonly returnAddress: Optional<string>
-
+  /** An optional CSRF token for preventing cross-site request forgery attacks.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   readonly csrf: Optional<string>
+  /** An optional origin for the request, which can be used for security and access control purposes.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
+  readonly origin: Optional<string>
   /** An optional sequence object that can be used for managing message sequencing in distributed systems.
    *
    * @author Xeno

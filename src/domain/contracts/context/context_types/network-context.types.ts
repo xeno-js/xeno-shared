@@ -50,7 +50,33 @@ export interface NetworkContext {
    */
   readonly path: Optional<string>
 
+  /**
+   * @description The CSRF token for the request, which can be used for preventing cross-site request forgery attacks.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   readonly csrf: Optional<string>
 
+  /**
+   * @description The transport used for the request, which can be used for logging, monitoring, or applying specific middleware logic.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
   readonly transport: Optional<{ req: unknown; res: unknown }>
+
+  /**
+   * @description The origin of the request, which can be used for logging, monitoring, or applying specific middleware logic.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
+  readonly origin: Optional<string>
 }
