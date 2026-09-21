@@ -26,9 +26,8 @@
 ## What is Xeno Shared?
 
 **Xeno Shared** (`@xeno-js/shared`) is the foundational package for the entire
-Xeno framework ecosystem[cite: 15]. It acts as the core dependency bridging both
-the backend (`@xeno-js/core`) and frontend (`@xeno-js/vue`)
-implementations[cite: 15].
+Xeno framework ecosystem. It acts as the core dependency bridging both the
+backend (`@xeno-js/core`) and frontend (`@xeno-js/vue`) implementations.
 
 This package is meticulously designed to provide zero-dependency (where
 possible), highly optimized primitives, enforcing structural consistency, type
@@ -42,22 +41,21 @@ Node.js server or a browser environment.
 
 - **Universal Type Definitions**: Centralizes critical `TypeScript` interfaces
   and types (`ResponseDto`, `IPaginatedResult`, `ICommand`, `IQuery`,
-  `InjectionToken`) to ensure a unified contract between the client and
-  server[cite: 15].
+  `InjectionToken`) to ensure a unified contract between the client and server.
 - **Agnostic Constants**: Exports canonical constants (`STATUS_CODES`,
   `ERROR_CODES`, `LOG_LEVEL`, `REQUEST_TYPE`) preventing magic strings/numbers
-  and maintaining unified semantics across the infrastructure[cite: 15].
+  and maintaining unified semantics across the infrastructure.
 - **Validation & Guards**: Provides the `Guards` utility object for robust,
   zero-magic runtime type checking and validation (e.g., `isDefined`,
-  `isNullOrEmpty`, `isDate`)[cite: 15].
+  `isNullOrEmpty`, `isDate`).
 - **Resiliency & Async Utilities**: Includes `PromiseHelper` for advanced async
   timing logic (delays, jitter for mitigating thundering herds) and constants
-  for `Cockatiel` resilience policies (`RESILIENCE_DEFAULTS`)[cite: 15].
+  for `Cockatiel` resilience policies (`RESILIENCE_DEFAULTS`).
 - **Security Primitives**: Features `SanitizeHelper` to enforce OWASP guidelines
-  against Log Injection (CWE-117) and unsafe URIs[cite: 15].
+  against Log Injection (CWE-117) and unsafe URIs.
 - **Shared Infrastructural Adapters**: Includes base infrastructural classes and
   mappers (e.g., `ReadDao`, `Repository`, `ConsoleLogger`, `AxiosHttpClient`,
-  `SupabaseClaimsMapper`) allowing downstream packages to extend them[cite: 15].
+  `SupabaseClaimsMapper`) allowing downstream packages to extend them.
 
 ---
 
