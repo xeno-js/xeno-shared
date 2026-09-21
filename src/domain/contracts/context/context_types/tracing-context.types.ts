@@ -42,4 +42,13 @@ export interface TracingContext {
    * @link https://github.com/Mattia-Carcione/xeno-js
    */
   readonly parentSpanId: Optional<string>
+  /**
+   * @description The referer header of the request.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
+  readonly referer?: Optional<string>
 }
