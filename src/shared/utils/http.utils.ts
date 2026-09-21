@@ -59,6 +59,26 @@ export const HttpHelper = Object.freeze({
     return normalized
   },
   /**
+   * @description Sanitizes the origin URL by parsing it and extracting the origin part. If the URL is not valid or cannot be parsed or does not contain an origin, it returns undefined.
+   * @param url The URL to be sanitized.
+   * @returns The sanitized origin URL or undefined if the URL is not valid or cannot be parsed or does not contain an origin.
+   *
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
+  sanitizeOriginUrl(url: Optional<string>): Optional<string> {
+    if (!Guards.isDefined(url)) return undefined
+    try {
+      const parsed = new URL(url)
+      return parsed.origin
+    } catch {
+      return undefined
+    }
+  },
+  /**
    * @description Generates a standardized successful HTTP response with the provided data, status code, metadata, and custom headers. The response includes a success flag set to true, the data payload, and any additional metadata. The headers include a default 'Content-Type' of 'application/json' along with any custom headers provided.
    * @param data The actual data payload to be included in the successful response. This can be of any type and will be wrapped in a SuccessResponseDto structure.
    * @param status The HTTP status code for the response, defaulting to 200 (OK) if not provided. This allows for flexibility in indicating different types of successful responses (e.g., 201 for created, 204 for no content).
