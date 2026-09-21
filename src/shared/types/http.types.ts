@@ -89,7 +89,27 @@ export interface HttpBaseRequest {
    * @link https://github.com/Mattia-Carcione/xeno-js
    */
   readonly timeoutMs?: Optional<number>
+
+  /**
+   * @description Optional response type for the request.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/Mattia-Carcione/xeno-js
+   */
+  readonly responseType?: Optional<HttpResponseType>
 }
+
+/**
+ * @description Represents the structure of an HTTP response.
+ *
+ * @author Xeno
+ * @version 1.0.0
+ * @since 2025-09-30
+ * @link https://github.com/Mattia-Carcione/xeno-js
+ */
+export type HttpResponseType = 'json' | 'blob' | 'text' | 'arraybuffer'
 
 /**
  * @description Request options accepted by the agnostic HTTP client.
