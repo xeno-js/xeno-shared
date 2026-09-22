@@ -1,5 +1,5 @@
-import type { ICacheKeyBuilder, IIdentityAccessor } from '@xeno-js/shared'
-import { Guards } from '@xeno-js/shared'
+import type { ICacheKeyBuilder, IIdentityAccessor } from '@/domain'
+import { Guards } from '@/shared'
 
 /**
  * @description The CacheKeyBuilder class implements the ICacheKeyBuilder interface, providing a method to build contextual cache keys based on the user's identity. This class utilizes an instance of IIdentityAccessor to retrieve the current user's identity, allowing for the creation of tenant-specific cache keys in multi-tenant applications. If a tenant ID is present in the identity, the cache key is prefixed with the tenant ID; otherwise, it defaults to a public cache key. This approach ensures that cached data is appropriately scoped to the user's context, preventing data leakage between tenants.
