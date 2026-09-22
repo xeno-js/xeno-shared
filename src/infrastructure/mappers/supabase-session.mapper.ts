@@ -1,6 +1,8 @@
 // infrastructure/mappers/supabase-session.mapper.ts
 import type { Session as SupabaseSession, User } from '@supabase/supabase-js'
-import type { AuthClaims, IBaseMapper, Session } from '@xeno-js/shared'
+
+import type { IBaseMapper } from '@/domain'
+import type { AuthClaims, Session } from '@/shared'
 
 export class SupabaseSessionMapper implements IBaseMapper<SupabaseSession, Session> {
   constructor(private readonly _claimsMapper: IBaseMapper<User, AuthClaims>) {}
