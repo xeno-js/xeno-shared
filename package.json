@@ -1,6 +1,6 @@
 {
   "name": "@xeno-js/shared",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Xeno shared npm package",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "bugs": {
     "url": "https://github.com/xeno-js/xeno-shared/issues"
   },
-  "homepage": "https://github.com/xeno-js/xeno-shared#readme",
+  "homepage": "https://www.xeno-js.it",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
