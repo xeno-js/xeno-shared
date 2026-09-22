@@ -7,7 +7,7 @@ import type { AuthPolicy, Optional } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IPolicyRegistry {
   /**
@@ -20,7 +20,7 @@ export interface IPolicyRegistry {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   addPolicy(intent: string, policy: AuthPolicy): this
 
@@ -33,7 +33,7 @@ export interface IPolicyRegistry {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   getPolicy(intent: string): Optional<AuthPolicy>
 }

@@ -7,7 +7,7 @@ import type { ResultType } from '../../../results/result.types'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IValidatorService {
   /**
@@ -20,7 +20,7 @@ export interface IValidatorService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   validate<T>(key: string, data: T): Promise<ResultType<boolean>>
 
@@ -33,7 +33,7 @@ export interface IValidatorService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   addSchema(key: string, schema: unknown): void
 }

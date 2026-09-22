@@ -8,7 +8,7 @@ import { Guards, StringHelper } from '@xeno-js/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export class InMemoryCache implements ICache {
   /**
@@ -19,7 +19,7 @@ export class InMemoryCache implements ICache {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   constructor(
     private _cache: Map<string, { value: string; expiresAt: Optional<number> }> = new Map(),

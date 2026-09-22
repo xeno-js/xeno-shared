@@ -9,7 +9,7 @@ import { LOG_LEVEL, LOG_LEVEL_NAMES } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export class BaseLogger implements ILogger {
   // ─── Private Fields ─────────────────────────────────────────────────────────
@@ -26,7 +26,7 @@ export class BaseLogger implements ILogger {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   constructor(
     private readonly _requestContext: IContextAccessor<RequestContext>,
@@ -64,7 +64,7 @@ export class BaseLogger implements ILogger {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   private broadcast(level: LogLevel, message: string, error: Optional<unknown> = undefined): void {
     if (level < this._minLevel) return

@@ -11,7 +11,7 @@ import type { TracingContext } from './tracing-context.types'
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface RequestContext {
   /** The identity of the user or system executing the request, which can be used for authentication and authorization purposes.
@@ -19,7 +19,7 @@ export interface RequestContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly identity: Identity
   /** The network context of the request, which includes information such as the client's IP address and request ID for tracing purposes.
@@ -27,7 +27,7 @@ export interface RequestContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly network: NetworkContext
   /** The tracing context of the request, which includes information for distributed tracing and correlation across services.
@@ -35,7 +35,7 @@ export interface RequestContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly tracing: TracingContext
   /** The messaging context of the request, which includes information related to messaging systems, such as return addresses and message expiration times. This context is useful for handling asynchronous communication and message-based workflows.
@@ -43,7 +43,7 @@ export interface RequestContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly messaging?: Maybe<MessagingContext>
 }

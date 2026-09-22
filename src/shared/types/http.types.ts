@@ -7,7 +7,7 @@ import type { Dictionary, Maybe, Optional } from './common.types'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'HEAD' | 'OPTIONS'
 
@@ -18,7 +18,7 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'HEAD' | 
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type HttpHeaders = Dictionary<Optional<string | string[]>>
 
@@ -29,7 +29,7 @@ export type HttpHeaders = Dictionary<Optional<string | string[]>>
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type HttpQueryValue = Maybe<string | number | boolean>
 
@@ -41,7 +41,7 @@ export type HttpQueryValue = Maybe<string | number | boolean>
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type HttpOptions = 'url' | 'method' | 'body'
 
@@ -51,7 +51,7 @@ export type HttpOptions = 'url' | 'method' | 'body'
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface HttpBaseRequest {
   /** @description Optional query string parameters.
@@ -59,7 +59,7 @@ export interface HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly query?: Optional<Dictionary<HttpQueryValue>>
 
@@ -68,7 +68,7 @@ export interface HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly headers?: Optional<HttpHeaders>
 
@@ -77,7 +77,7 @@ export interface HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly signal: Optional<AbortSignal>
 
@@ -86,7 +86,7 @@ export interface HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly timeoutMs?: Optional<number>
 
@@ -96,7 +96,7 @@ export interface HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly responseType?: Optional<HttpResponseType>
 }
@@ -107,7 +107,7 @@ export interface HttpBaseRequest {
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export type HttpResponseType = 'json' | 'blob' | 'text' | 'arraybuffer'
 
@@ -118,7 +118,7 @@ export type HttpResponseType = 'json' | 'blob' | 'text' | 'arraybuffer'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface HttpRequest<TBody = unknown> extends HttpBaseRequest {
   /** @description HTTP method used for the outgoing call.
@@ -126,7 +126,7 @@ export interface HttpRequest<TBody = unknown> extends HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly method: HttpMethod
 
@@ -135,7 +135,7 @@ export interface HttpRequest<TBody = unknown> extends HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly body?: Optional<TBody>
 
@@ -144,7 +144,7 @@ export interface HttpRequest<TBody = unknown> extends HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly url?: string
 }
@@ -156,7 +156,7 @@ export interface HttpRequest<TBody = unknown> extends HttpBaseRequest {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface HttpResponse<TData = unknown> {
   /** @description HTTP status code returned by the server.
@@ -164,7 +164,7 @@ export interface HttpResponse<TData = unknown> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly status: number
 
@@ -173,7 +173,7 @@ export interface HttpResponse<TData = unknown> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly ok: boolean
 
@@ -182,7 +182,7 @@ export interface HttpResponse<TData = unknown> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly headers: HttpHeaders
 
@@ -191,7 +191,7 @@ export interface HttpResponse<TData = unknown> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly data: TData
 }

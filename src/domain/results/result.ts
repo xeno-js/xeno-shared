@@ -11,7 +11,7 @@ import type { Optional } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export class Result<TValue, TError = never> {
   /**
@@ -21,7 +21,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   private readonly _isSuccess: boolean
   /**
@@ -31,7 +31,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   private readonly _error: Optional<TError>
   /**
@@ -41,7 +41,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   private readonly _value: Optional<TValue>
 
@@ -56,7 +56,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   private constructor(isSuccess: boolean, error: Optional<TError>, value: Optional<TValue>) {
     this._isSuccess = isSuccess
@@ -74,7 +74,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public static ok<U>(value?: U): Result<U> {
     return new Result<U>(true, undefined, value)
@@ -90,7 +90,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public static fail<U, V = never>(error: V): Result<U, V> {
     return new Result<U, V>(false, error, undefined)
@@ -105,7 +105,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public isOk(): boolean {
     return this._isSuccess
@@ -121,7 +121,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public getValueOrThrow(): Optional<TValue> {
     if (!this._isSuccess) {
@@ -140,7 +140,7 @@ export class Result<TValue, TError = never> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public getErrorOrThrow(): TError {
     if (this._isSuccess) {

@@ -9,7 +9,7 @@ import type { IQuery } from './cqrs_types/iquery.types'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IMediator {
   /**
@@ -22,7 +22,7 @@ export interface IMediator {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   send<TResponse>(request: ICommand<TResponse>, signal: AbortSignal): Promise<ResultType<TResponse>>
 
@@ -36,7 +36,7 @@ export interface IMediator {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   query<TResponse>(request: IQuery<TResponse>, signal: AbortSignal): Promise<ResultType<TResponse>>
 }

@@ -12,7 +12,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IPaginatedResult<T> {
   /**
@@ -22,7 +22,7 @@ export interface IPaginatedResult<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly items: readonly T[]
 
@@ -33,7 +33,7 @@ export interface IPaginatedResult<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly total: number
 
@@ -44,7 +44,7 @@ export interface IPaginatedResult<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly page: number
 
@@ -55,7 +55,7 @@ export interface IPaginatedResult<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly pageSize: number
 
@@ -67,7 +67,7 @@ export interface IPaginatedResult<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly totalPages: number
 
@@ -78,7 +78,7 @@ export interface IPaginatedResult<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly hasNextPage: boolean
 
@@ -89,7 +89,7 @@ export interface IPaginatedResult<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly hasPreviousPage: boolean
 }

@@ -9,7 +9,7 @@ import type { IDisposable } from '../disposables'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IReadDataSource<TDto> extends IDisposable {
   /**
@@ -22,7 +22,7 @@ export interface IReadDataSource<TDto> extends IDisposable {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   findAll(ctx: UserContext, signal: Optional<AbortSignal>): Promise<TDto[]>
 
@@ -37,7 +37,7 @@ export interface IReadDataSource<TDto> extends IDisposable {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   findById(
     id: string | number,

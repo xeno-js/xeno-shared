@@ -5,7 +5,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const IDEMPOTENCY_CONSTANTS = Object.freeze({
   /**
@@ -15,7 +15,7 @@ export const IDEMPOTENCY_CONSTANTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   LOCK_KEY_PREFIX: 'idempotency_lock:',
 
@@ -26,7 +26,7 @@ export const IDEMPOTENCY_CONSTANTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   PROCESSED_KEY_PREFIX: 'idempotency_processed:',
 
@@ -37,7 +37,7 @@ export const IDEMPOTENCY_CONSTANTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   DEFAULT_TTL_SECONDS: 86400,
 
@@ -48,7 +48,7 @@ export const IDEMPOTENCY_CONSTANTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   DEFAULT_IDEMPOTENCY_LOCK_TTL_SECONDS: 60,
 
@@ -59,7 +59,7 @@ export const IDEMPOTENCY_CONSTANTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   LOCKED_VALUE: 'LOCKED',
 
@@ -70,7 +70,7 @@ export const IDEMPOTENCY_CONSTANTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   PROCESSED_VALUE: 'PROCESSED',
 } as const)

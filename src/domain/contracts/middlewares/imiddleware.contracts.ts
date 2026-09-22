@@ -7,7 +7,7 @@ import type { HttpMethod, ResponseDto } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IMiddleware<THeaders = unknown> {
   /**
@@ -21,7 +21,7 @@ export interface IMiddleware<THeaders = unknown> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   execute<T>(
     req: { method: HttpMethod; path: string; transport: { req: unknown; res: unknown } },

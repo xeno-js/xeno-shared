@@ -7,7 +7,7 @@ import type { Guid, Optional } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 
 /**
@@ -17,7 +17,7 @@ import type { Guid, Optional } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface Identity {
   /** @description The unique identifier of the user.
@@ -25,7 +25,7 @@ export interface Identity {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly userId: Optional<Guid>
 
@@ -34,7 +34,7 @@ export interface Identity {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly email: Optional<string>
 
@@ -45,7 +45,7 @@ export interface Identity {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly tenantId: Optional<Guid>
 
@@ -54,7 +54,7 @@ export interface Identity {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly roles: Optional<string[]>
 
@@ -63,7 +63,7 @@ export interface Identity {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly permissions: Optional<string[]>
 }

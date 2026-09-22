@@ -7,7 +7,7 @@ import type { Guid, Optional } from './common.types'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface Metadata {
   /** An optional identifier for correlating related operations across different services or components.
@@ -15,7 +15,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly correlationId: Optional<Guid>
   /** An optional unique identifier for the request, which can be used for ensuring idempotency and tracing purposes.
@@ -23,7 +23,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly requestId: Optional<Guid>
   /** An optional token that can be used for authentication or authorization purposes.
@@ -31,7 +31,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly token: Optional<string>
   /** An optional IP address of the client making the request, which can be used for audit logging and security purposes.
@@ -39,7 +39,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly clientIp: Optional<string>
   /** An optional identifier for distributed tracing, which can be used to track the flow of requests across multiple services in a microservices architecture.
@@ -47,7 +47,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly spanId: Optional<Guid>
   /** An optional identifier for the parent span in distributed tracing, which can be used to establish a hierarchy of spans and track the flow of requests across multiple services in a microservices architecture.
@@ -55,7 +55,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly parentSpanId: Optional<string>
   /** A format indicator for the request, which can be used for content negotiation and logging purposes.
@@ -63,7 +63,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly formatIndicator: string
   /** An optional user agent string of the client making the request, which can be used for audit logging and security purposes.
@@ -71,7 +71,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly userAgent: Optional<string>
   /** An optional return address for the request, which can be used for routing responses or callbacks.
@@ -79,7 +79,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly returnAddress: Optional<string>
   /** An optional CSRF token for preventing cross-site request forgery attacks.
@@ -87,7 +87,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly csrf: Optional<string>
   /** An optional origin for the request, which can be used for security and access control purposes.
@@ -95,7 +95,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly origin: Optional<string>
   /** An optional referer for the request, which can be used for tracking and security purposes.
@@ -103,7 +103,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly referer: Optional<string>
   /** An optional sequence object that can be used for managing message sequencing in distributed systems.
@@ -111,7 +111,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly sequence: Optional<{
     /** An optional unique identifier for the message sequence, which can be used to track and manage the order of messages in a sequence.
@@ -119,7 +119,7 @@ export interface Metadata {
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     readonly sequenceId: Optional<string>
     /** An optional position of the message within the sequence, which can be used to determine the order of messages in a sequence.
@@ -127,7 +127,7 @@ export interface Metadata {
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     readonly position: Optional<number>
     /** An optional size of the message sequence, which can be used to determine the total number of messages in a sequence.
@@ -135,7 +135,7 @@ export interface Metadata {
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     readonly size: Optional<number>
   }>
@@ -144,7 +144,7 @@ export interface Metadata {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly expiration: Optional<number>
 }

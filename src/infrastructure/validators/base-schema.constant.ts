@@ -7,7 +7,7 @@ import { REQUEST_TYPE } from '@/shared'
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export const baseCommandZodSchema = z.object({
   intent: z.string().min(1, 'Intent is required'),
@@ -19,7 +19,7 @@ export const baseCommandZodSchema = z.object({
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 const queryZodSchema = z.object({
   intent: z.string().min(1, 'Intent is required'),
@@ -38,7 +38,7 @@ const cacheableOptionsZodSchema = z.object({
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export const baseQueryZodSchema = queryZodSchema.extend({
   cacheOptions: cacheableOptionsZodSchema,

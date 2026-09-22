@@ -9,7 +9,7 @@ import { Guards } from './guards.utils'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const GuidHelper = Object.freeze({
   /**
@@ -20,7 +20,7 @@ export const GuidHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   generate(): Guid {
     return crypto.randomUUID()
@@ -35,7 +35,7 @@ export const GuidHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   isValidGuid(value: Guid): boolean {
     const guid = value.toString()
@@ -51,7 +51,7 @@ export const GuidHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   isValid(value: string): value is Guid {
     const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
@@ -67,7 +67,7 @@ export const GuidHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   parse(value: Optional<string>): Optional<Guid> {
     if (!Guards.isNullOrEmpty(value) && this.isValid(value) && !this.isEmpty(value)) {
@@ -85,7 +85,7 @@ export const GuidHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   isEmpty(value: string): boolean {
     const emptyGuid = '00000000-0000-0000-0000-000000000000'

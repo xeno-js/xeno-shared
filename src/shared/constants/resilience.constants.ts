@@ -7,7 +7,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const RESILIENCE_DEFAULTS = Object.freeze({
   /** @description Default retry policy values.
@@ -15,7 +15,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   RETRY: Object.freeze({
     /** @description Default number of retry attempts.
@@ -23,7 +23,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     ATTEMPTS: 3,
 
@@ -32,7 +32,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     BASE_DELAY_MS: 100,
 
@@ -41,7 +41,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     MAX_DELAY_MS: 1000,
   }),
@@ -51,7 +51,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CIRCUIT_BREAKER: Object.freeze({
     /** @description Default number of consecutive failures before opening the circuit.
@@ -59,7 +59,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     CONSECUTIVE_FAILURES: 5,
 
@@ -68,7 +68,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     HALF_OPEN_TIMEOUT_MS: 30_000,
   }),
@@ -78,7 +78,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   BULKHEAD: Object.freeze({
     /** @description Default maximum number of concurrent operations.
@@ -86,7 +86,7 @@ export const RESILIENCE_DEFAULTS = Object.freeze({
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     MAX_CONCURRENT: 10,
   }),

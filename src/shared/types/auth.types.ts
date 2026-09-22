@@ -8,7 +8,7 @@ import type { Guid, Optional } from './common.types'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 
 /**
@@ -18,7 +18,7 @@ import type { Guid, Optional } from './common.types'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface AuthClaims {
   /**
@@ -28,7 +28,7 @@ export interface AuthClaims {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly sub: string
 
@@ -38,7 +38,7 @@ export interface AuthClaims {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly email: Optional<string>
 
@@ -51,7 +51,7 @@ export interface AuthClaims {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly tenantId: Optional<string>
   /**
@@ -61,7 +61,7 @@ export interface AuthClaims {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly roles: Optional<string[]>
   /**
@@ -71,7 +71,7 @@ export interface AuthClaims {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly permissions: Optional<string[]>
 }
@@ -82,7 +82,7 @@ export interface AuthClaims {
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface UserContext {
   /**
@@ -90,7 +90,7 @@ export interface UserContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly userId: Optional<Guid>
 
@@ -99,7 +99,7 @@ export interface UserContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly tenantId: Optional<Guid>
 }

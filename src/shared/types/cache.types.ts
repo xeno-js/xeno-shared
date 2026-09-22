@@ -7,7 +7,7 @@ import type { Optional } from './common.types'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface ICacheableOptions {
   /**
@@ -17,7 +17,7 @@ export interface ICacheableOptions {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly cacheKey: string
 
@@ -28,7 +28,7 @@ export interface ICacheableOptions {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly ttl: Optional<number>
 
@@ -40,7 +40,7 @@ export interface ICacheableOptions {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly bypassCache: Optional<boolean>
 
@@ -51,7 +51,7 @@ export interface ICacheableOptions {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly consistentRead: Optional<boolean>
 
@@ -62,7 +62,7 @@ export interface ICacheableOptions {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly isUserScoped: boolean
 }

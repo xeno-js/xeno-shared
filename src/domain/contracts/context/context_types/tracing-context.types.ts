@@ -7,7 +7,7 @@ import type { Guid, Optional } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface TracingContext {
   /** A unique identifier for correlating related operations across different services or components.
@@ -15,7 +15,7 @@ export interface TracingContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly correlationId: Guid
   /** The timestamp indicating when the operation started, used for measuring duration and performance.
@@ -23,7 +23,7 @@ export interface TracingContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly startTime: number
   /** An optional identifier for distributed tracing, which can be used to track the flow of requests across multiple services in a microservices architecture.
@@ -31,7 +31,7 @@ export interface TracingContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly spanId: Optional<string>
   /** An optional identifier for the parent span in distributed tracing, which can be used to establish a hierarchy of spans and track the flow of requests across multiple services in a microservices architecture.
@@ -39,7 +39,7 @@ export interface TracingContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly parentSpanId: Optional<string>
   /**
@@ -48,7 +48,7 @@ export interface TracingContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly referer?: Optional<string>
 }

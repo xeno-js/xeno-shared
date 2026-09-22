@@ -7,7 +7,7 @@ import type { HttpHeaders, Optional } from '@/shared'
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface HttpClientConfig {
   /** @description Optional default headers to include in every request made by the HTTP client.
@@ -15,7 +15,7 @@ export interface HttpClientConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   defaultHeaders: Optional<HttpHeaders>
   /** @description Optional base URL to prepend to all request URLs made by the HTTP client.
@@ -23,7 +23,7 @@ export interface HttpClientConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   baseURL: Optional<string>
   /** @description Optional timeout in milliseconds for all requests made by the HTTP client.
@@ -31,7 +31,7 @@ export interface HttpClientConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   timeoutMs: Optional<number>
 
@@ -40,7 +40,7 @@ export interface HttpClientConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   keepAlive: Optional<boolean>
 
@@ -49,7 +49,7 @@ export interface HttpClientConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   maxSockets: Optional<number>
 
@@ -59,7 +59,7 @@ export interface HttpClientConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   maxRedirects: Optional<number>
 
@@ -69,7 +69,7 @@ export interface HttpClientConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   decompress: Optional<boolean>
 
@@ -84,7 +84,7 @@ export interface HttpClientConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   proxy: ProxyConfig | false
 }
@@ -95,7 +95,7 @@ export interface HttpClientConfig {
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface ProxyConfig {
   /**
@@ -104,7 +104,7 @@ export interface ProxyConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   host: string
   /**
@@ -113,7 +113,7 @@ export interface ProxyConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   port: number
   /**
@@ -122,7 +122,7 @@ export interface ProxyConfig {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   auth?: {
     /**
@@ -131,7 +131,7 @@ export interface ProxyConfig {
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     username: string
     /**
@@ -140,7 +140,7 @@ export interface ProxyConfig {
      * @author Xeno
      * @version 1.0.0
      * @since 2025-09-30
-     * @link https://github.com/Mattia-Carcione/xeno-js
+     * @link https://github.com/xeno-js/xeno-js
      */
     password: string
   }

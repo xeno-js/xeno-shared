@@ -7,7 +7,7 @@ import type { HttpOptions, HttpRequest, HttpResponse, Optional } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IHttpClient {
   /**
@@ -20,7 +20,7 @@ export interface IHttpClient {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   get<TResponse = unknown>(
     url: string,
@@ -38,7 +38,7 @@ export interface IHttpClient {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   post<TResponse = unknown, TBody = unknown>(
     url: string,
@@ -57,7 +57,7 @@ export interface IHttpClient {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   put<TResponse = unknown, TBody = unknown>(
     url: string,
@@ -76,7 +76,7 @@ export interface IHttpClient {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   patch<TResponse = unknown, TBody = unknown>(
     url: string,
@@ -94,7 +94,7 @@ export interface IHttpClient {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   delete<TResponse = unknown>(
     url: string,

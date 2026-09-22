@@ -12,7 +12,7 @@ export interface IBaseAccessor<TCtx>
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface IIdentityAccessor {
   /**
@@ -22,7 +22,7 @@ export interface IIdentityAccessor {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   getIdentity(): Optional<Identity>
 }
@@ -34,7 +34,7 @@ export interface IIdentityAccessor {
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface IContextAccessor<TCtx> {
   /**
@@ -44,7 +44,7 @@ export interface IContextAccessor<TCtx> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   getContext(): Optional<TCtx>
 }
@@ -56,7 +56,7 @@ export interface IContextAccessor<TCtx> {
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface INetworkContextAccessor {
   /**
@@ -66,7 +66,7 @@ export interface INetworkContextAccessor {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   getNetworkContext(): Optional<NetworkContext>
 }

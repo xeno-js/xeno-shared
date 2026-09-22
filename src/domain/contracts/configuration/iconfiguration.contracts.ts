@@ -7,7 +7,7 @@ import type { Optional } from '@/shared'
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface IConfigurationService {
   /**
@@ -19,7 +19,7 @@ export interface IConfigurationService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   get(key: string, defaultValue?: string): Optional<string>
 
@@ -32,7 +32,7 @@ export interface IConfigurationService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   getNumber(key: string, defaultValue?: number): Optional<number>
 
@@ -45,7 +45,7 @@ export interface IConfigurationService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   getBoolean(key: string, defaultValue?: boolean): Optional<boolean>
 
@@ -58,7 +58,7 @@ export interface IConfigurationService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   getOrThrow(key: string): string
 }

@@ -18,7 +18,7 @@ import { Guards } from './guards.utils'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 
 /**
@@ -28,7 +28,7 @@ import { Guards } from './guards.utils'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const HttpHelper = Object.freeze({
   /**
@@ -40,7 +40,7 @@ export const HttpHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   normalizeHeaders(headers: unknown): HttpHeaders {
     if (!Guards.isDefined(headers) || !Guards.isObject(headers)) return {}
@@ -67,7 +67,7 @@ export const HttpHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   sanitizeOriginUrl(url: Optional<string>): Optional<string> {
     if (!Guards.isDefined(url)) return undefined
@@ -90,7 +90,7 @@ export const HttpHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   success<T>(
     data: T | IPaginatedResult<T>,
@@ -126,7 +126,7 @@ export const HttpHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   error<T>(
     dto: ErrorResponseDto,

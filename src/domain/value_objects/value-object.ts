@@ -10,7 +10,7 @@ import type { IValueObject } from './ivalue-object.contracts'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export abstract class ValueObject<T extends object> implements IValueObject<T> {
   /** @description The properties of the value object, which are immutable and define the value represented by the value object.
@@ -18,7 +18,7 @@ export abstract class ValueObject<T extends object> implements IValueObject<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   protected readonly _props: T
 

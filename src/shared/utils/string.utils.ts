@@ -8,7 +8,7 @@ import { Guards } from './guards.utils'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const StringHelper = Object.freeze({
   /**
@@ -20,7 +20,7 @@ export const StringHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   safeStringify<T>(value: T): string {
     try {
@@ -40,7 +40,7 @@ export const StringHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   safeParse<T = unknown>(input: string, fallback: Optional<T> = undefined): T | Optional<string> {
     try {
@@ -59,7 +59,7 @@ export const StringHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   camelCase(input: string): string {
     const segments = input.split(/[-_\s]+/)
@@ -78,7 +78,7 @@ export const StringHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   interpolate(template: string, vars: Readonly<Dictionary<string | number>>): string {
     return template.replace(/\{\{(\w+)\}\}/g, (_match, key: string) => {
@@ -98,7 +98,7 @@ export const StringHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   truncate(input: string, maxLength: number, suffix = '…'): string {
     if (input.length <= maxLength) return input
@@ -115,7 +115,7 @@ export const StringHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   generateReferenceCode(prefix: string): string {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
@@ -136,7 +136,7 @@ export const StringHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   getSingleValue(
     value: Optional<string | string[]>,

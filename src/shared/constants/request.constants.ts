@@ -3,7 +3,7 @@
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export const REQUEST_TYPE = Object.freeze({
   /** @description A request that intends to modify state (e.g. create, update, delete).
@@ -11,7 +11,7 @@ export const REQUEST_TYPE = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   COMMAND: 'COMMAND',
   /** @description A request that intends to retrieve data without modifying state.
@@ -19,7 +19,7 @@ export const REQUEST_TYPE = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   QUERY: 'QUERY',
 } as const)
@@ -29,6 +29,6 @@ export const REQUEST_TYPE = Object.freeze({
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export type RequestType = (typeof REQUEST_TYPE)[keyof typeof REQUEST_TYPE]

@@ -5,7 +5,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const DEFAULT_CONCURRENCY = Object.freeze({
   /**
@@ -15,7 +15,7 @@ export const DEFAULT_CONCURRENCY = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   MAX_RETRIES: 3,
   /**
@@ -25,7 +25,7 @@ export const DEFAULT_CONCURRENCY = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   BASE_DELAY: 20,
   /**
@@ -35,7 +35,7 @@ export const DEFAULT_CONCURRENCY = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   MAX_JITTER: 30,
 } as const)

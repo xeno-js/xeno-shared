@@ -7,7 +7,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const TOKENS = Object.freeze({
   ALLOW_ORIGIN: 'ALLOW_ORIGIN',
@@ -17,7 +17,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   AUTHORIZATION_PIPELINE: 'AUTHORIZATION_PIPELINE',
   /** @description Token used to register and resolve the AuthService instance in the dependency injection container.
@@ -25,7 +25,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   AUTH_SERVICE: 'AUTH_SERVICE',
 
@@ -35,7 +35,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   BEARER_TOKEN_EXTRACTOR: 'BEARER_TOKEN_EXTRACTOR',
   /** @description Token used to register and resolve the InMemoryCache instance in the dependency injection container.
@@ -43,7 +43,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CACHE: 'CACHE',
   /** @description Token used to register and resolve the CacheKeyBuilder instance in the dependency injection container.
@@ -51,7 +51,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CACHE_KEY_BUILDER: 'CACHE_KEY_BUILDER',
   /** @description Token used to register and resolve the ClaimsIdentityMapper instance in the dependency injection container.
@@ -59,7 +59,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CLAIMS_IDENTITY_MAPPER: 'CLAIMS_IDENTITY_MAPPER',
   /** @description Token used to register and resolve command pipeline behaviors in the dependency injection container.
@@ -67,7 +67,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   COMMAND_PIPELINES_BEHAVIOR: 'COMMAND_PIPELINES_BEHAVIOR',
   /** @description Token used to register and resolve the CompositePipeline instance in the dependency injection container.
@@ -75,7 +75,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   COMPOSITE_PIPELINE: 'COMPOSITE_PIPELINE',
   /** @description Token used to register and resolve the ConcurrencyRetryPipeline instance in the dependency injection container.
@@ -83,7 +83,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CONCURRENCY_RETRY_PIPELINE: 'CONCURRENCY_RETRY_PIPELINE',
   /** @description Token used to register and resolve the ConcurrencyService instance in the dependency injection container.
@@ -91,7 +91,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CONCURRENCY_SERVICE: 'CONCURRENCY_SERVICE',
   /** @description Token used to register and resolve the ConfigurationService instance in the dependency injection container.
@@ -99,7 +99,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CONFIGURATION_SERVICE: 'CONFIGURATION_SERVICE',
   /** @description Token used to register and resolve the ConsoleLogger instance in the dependency injection container.
@@ -107,7 +107,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CONSOLE_LOGGER: 'CONSOLE_LOGGER',
   /** @description Token used to register and resolve the ContextAccessor instance in the dependency injection container.
@@ -115,7 +115,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CONTEXT_ACCESSOR: 'CONTEXT_ACCESSOR',
   /** @description Token used to register and resolve the DbContext instance in the dependency injection container.
@@ -123,7 +123,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   DB_CONTEXT: 'DB_CONTEXT',
   /** @description Token used to register and resolve the ExceptionPipeline instance in the dependency injection container.
@@ -131,7 +131,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   EXCEPTION_PIPELINE: 'EXCEPTION_PIPELINE',
   /** @description Token used to register and resolve the GateKeeper instance in the dependency injection container.
@@ -139,7 +139,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   GATE_KEEPER: 'GATE_KEEPER',
   /** @description Token used to register and resolve the IdempotencyPipeline instance in the dependency injection container.
@@ -147,7 +147,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   IDEMPOTENCY_PIPELINE: 'IDEMPOTENCY_PIPELINE',
   /** @description Token used to register and resolve the IdempotencyStore instance in the dependency injection container.
@@ -155,7 +155,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   IDEMPOTENCY_STORE: 'IDEMPOTENCY_STORE',
   /** @description Token used to register and resolve the IdentityAccessor instance in the dependency injection container.
@@ -163,7 +163,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   IDENTITY_ACCESSOR: 'IDENTITY_ACCESSOR',
   /** @description Token used to register and resolve the Logger instance in the dependency injection container.
@@ -171,7 +171,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   LOGGER: 'LOGGER',
   /** @description Token used to register and resolve the LoggerConfig instance in the dependency injection container.
@@ -179,7 +179,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   LOGGER_CONFIG: 'LOGGER_CONFIG',
   /** @description Token used to register and resolve the LoggingPipeline instance in the dependency injection container.
@@ -187,7 +187,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   LOGGING_PIPELINE: 'LOGGING_PIPELINE',
   /** @description Token used to register and resolve the Mediator instance in the dependency injection container.
@@ -195,7 +195,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   MEDIATOR: 'MEDIATOR',
   /** @description Token used to register and resolve the PerformancePipeline instance in the dependency injection container.
@@ -203,7 +203,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   PERFORMANCE_PIPELINE: 'PERFORMANCE_PIPELINE',
   /** @description Token used to register and resolve the PermissionAuthorizationPipeline instance in the dependency injection container.
@@ -211,7 +211,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   PERMISSION_AUTHORIZATION_PIPELINE: 'PERMISSION_AUTHORIZATION_PIPELINE',
   /** @description Token used to register and resolve the PinoLogger instance in the dependency injection container.
@@ -219,7 +219,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   PINO_LOGGER: 'PINO_LOGGER',
   /** @description Token used to register and resolve the PolicyRegistry instance in the dependency injection container.
@@ -227,7 +227,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   POLICY_REGISTRY: 'POLICY_REGISTRY',
   /** @description Token used to register and resolve the QueryCachingPipeline instance in the dependency injection container.
@@ -235,7 +235,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   QUERY_CACHING_PIPELINE: 'QUERY_CACHING_PIPELINE',
   /** @description Token used to register and resolve query pipeline behaviors in the dependency injection container.
@@ -243,7 +243,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   QUERY_PIPELINES_BEHAVIOR: 'QUERY_PIPELINES_BEHAVIOR',
   /** @description Token used to register and resolve the RequestContext instance in the dependency injection container.
@@ -251,7 +251,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   REQUEST_CONTEXT: 'REQUEST_CONTEXT',
   /** @description Token used to register and resolve the RequestContextMiddleware in the dependency injection container.
@@ -259,7 +259,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   MIDDLEWARE: 'MIDDLEWARE',
   AUTH_MIDDLEWARE: 'AUTH_MIDDLEWARE',
@@ -275,7 +275,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   RESILIENCE_CLIENT: 'RESILIENCE_CLIENT',
   /** @description Token used to register and resolve the RoleAuthorizationPipeline instance in the dependency injection container.
@@ -283,7 +283,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   ROLE_AUTHORIZATION_PIPELINE: 'ROLE_AUTHORIZATION_PIPELINE',
   /** @description Token used to register and resolve the SchemaValidationStrategy instance in the dependency injection container.
@@ -291,7 +291,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SCHEMA_VALIDATION_STRATEGY: 'SCHEMA_VALIDATION_STRATEGY',
   /** @description Token used to register and resolve the SentryLogger instance in the dependency injection container.
@@ -299,7 +299,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SENTRY_LOGGER: 'SENTRY_LOGGER',
   /** @description Token used to register and resolve the ServiceContainer instance in the dependency injection container.
@@ -307,7 +307,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SERVICE_CONTAINER: 'SERVICE_CONTAINER',
   /** @description Token used to register and resolve the ServiceExtractor instance in the dependency injection container.
@@ -315,7 +315,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SERVICE_EXTRACTOR: 'SERVICE_EXTRACTOR',
   /** @description Token used to register and resolve the ServiceScopeFactory instance in the dependency injection container.
@@ -323,7 +323,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SERVICE_SCOPE_FACTORY: 'SERVICE_SCOPE_FACTORY',
   /** @description Token used to register and resolve the TenantAuthorizationPipeline instance in the dependency injection container.
@@ -331,7 +331,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   TENANT_AUTHORIZATION_PIPELINE: 'TENANT_AUTHORIZATION_PIPELINE',
   /** @description Token used to register and resolve the UnitOfWork instance in the dependency injection container.
@@ -339,7 +339,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   UNIT_OF_WORK: 'UNIT_OF_WORK',
   /** @description Token used to register and resolve the UserAuthorizationPipeline instance in the dependency injection container.
@@ -347,7 +347,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   USER_AUTHORIZATION_PIPELINE: 'USER_AUTHORIZATION_PIPELINE',
   /** @description Token used to register and resolve the ValidationPipeline instance in the dependency injection container.
@@ -355,7 +355,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   VALIDATION_PIPELINE: 'VALIDATION_PIPELINE',
   /** @description Token used to register and resolve the ZodValidator instance in the dependency injection container.
@@ -363,7 +363,7 @@ export const TOKENS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   ZOD_VALIDATOR: 'ZOD_VALIDATOR',
   SERVICE_SCOPE_ACCESSOR: 'SERVICE_SCOPE_ACCESSOR',

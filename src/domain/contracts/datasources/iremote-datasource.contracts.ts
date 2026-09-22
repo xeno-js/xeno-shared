@@ -8,7 +8,7 @@ import type { ResultType } from '../../results/result.types'
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface IRemoteDataSource {
   /** @description Fetches data from a remote endpoint using the specified HTTP method and request options. The method returns a ResultType that encapsulates either the successful response data or an error, providing a consistent way to handle both success and failure cases.
@@ -20,7 +20,7 @@ export interface IRemoteDataSource {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   get<TResponse>(endpoint: string, request: HttpBaseRequest): Promise<ResultType<TResponse>>
 
@@ -33,7 +33,7 @@ export interface IRemoteDataSource {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   post<TResponse, TBody = unknown>(
     endpoint: string,
@@ -50,7 +50,7 @@ export interface IRemoteDataSource {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   put<TResponse, TBody = unknown>(
     endpoint: string,
@@ -67,7 +67,7 @@ export interface IRemoteDataSource {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   patch<TResponse, TBody = unknown>(
     endpoint: string,
@@ -84,7 +84,7 @@ export interface IRemoteDataSource {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   delete<TResponse>(endpoint: string, request: HttpBaseRequest): Promise<ResultType<TResponse>>
 }

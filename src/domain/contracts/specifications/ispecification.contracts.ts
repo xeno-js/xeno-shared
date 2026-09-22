@@ -9,7 +9,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface ISpecification<T> {
   /**
@@ -21,7 +21,7 @@ export interface ISpecification<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   isSatisfiedBy(candidate: T): boolean
   /**
@@ -31,7 +31,7 @@ export interface ISpecification<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   and(other: ISpecification<T>): ISpecification<T>
 
@@ -42,7 +42,7 @@ export interface ISpecification<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   or(other: ISpecification<T>): ISpecification<T>
 
@@ -53,7 +53,7 @@ export interface ISpecification<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   not(): ISpecification<T>
 }

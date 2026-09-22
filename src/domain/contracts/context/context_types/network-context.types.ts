@@ -6,7 +6,7 @@ import type { Guid, Optional } from '@/shared'
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export interface NetworkContext {
   /** A unique identifier for the request, which can be used for ensuring idempotency and tracing purposes.
@@ -14,7 +14,7 @@ export interface NetworkContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly requestId: Guid
   /** The IP address of the client making the request, which can be used for audit logging and security purposes.
@@ -22,7 +22,7 @@ export interface NetworkContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly clientIp: Optional<string>
   /** The user agent string of the client making the request, which can be used for audit logging and security purposes.
@@ -30,7 +30,7 @@ export interface NetworkContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly userAgent: Optional<string>
   /** The format indicator for the request, which can be used for content negotiation and logging purposes.
@@ -38,7 +38,7 @@ export interface NetworkContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly formatIndicator: Optional<string>
   /** The path of the request, which can be used for routing, logging, or applying specific middleware logic.
@@ -46,7 +46,7 @@ export interface NetworkContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly path: Optional<string>
 
@@ -56,7 +56,7 @@ export interface NetworkContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly csrf: Optional<string>
 
@@ -66,7 +66,7 @@ export interface NetworkContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly transport: Optional<{ req: unknown; res: unknown }>
 
@@ -76,7 +76,7 @@ export interface NetworkContext {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly origin: Optional<string>
 }

@@ -9,7 +9,7 @@ const MS_PER_DAY = 86_400_000
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const DateHelper = Object.freeze({
   /**
@@ -21,7 +21,7 @@ export const DateHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   toISOString(date: Date): string {
     return date.toISOString()
@@ -37,7 +37,7 @@ export const DateHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   addDays(date: Date, days: number): Date {
     return new Date(date.getTime() + days * MS_PER_DAY)
@@ -53,7 +53,7 @@ export const DateHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   isExpired(expiresAt: Date, nowMs?: number): boolean {
     const now = nowMs ?? Date.now()
@@ -70,7 +70,7 @@ export const DateHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   isAfter(after: Date, before: Date): boolean {
     return Guards.isDate(after) && Guards.isDate(before) && after.getTime() > before.getTime()
@@ -85,7 +85,7 @@ export const DateHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   isFuture(date: Date): boolean {
     return Guards.isDate(date) && date.getTime() > Date.now()

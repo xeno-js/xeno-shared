@@ -18,7 +18,7 @@ declare const _phantom: unique symbol
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface InjectionToken<T> {
   /** @description The unique symbol that identifies this token at runtime.
@@ -26,7 +26,7 @@ export interface InjectionToken<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly symbol: symbol
   /** @description Phantom property to bind the generic type `T` to this token.
@@ -34,7 +34,7 @@ export interface InjectionToken<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly [_phantom]: T
 }

@@ -10,7 +10,7 @@ import type { IRequest } from './cqrs_types'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Delegate<TResult> = () => Promise<ResultType<TResult>>
 
@@ -24,7 +24,7 @@ export type Delegate<TResult> = () => Promise<ResultType<TResult>>
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IPipelineBehavior<TInput extends IRequest<TResult>, TResult> {
   /**
@@ -37,7 +37,7 @@ export interface IPipelineBehavior<TInput extends IRequest<TResult>, TResult> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   handle(request: TInput, next: Delegate<TResult>): Promise<ResultType<TResult>>
 }

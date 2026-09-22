@@ -9,7 +9,7 @@ import { Guards } from '@xeno-js/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export class SupabaseClaimsMapper implements IBaseMapper<User, AuthClaims> {
   public map(user: User): AuthClaims {

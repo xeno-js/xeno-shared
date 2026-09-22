@@ -8,7 +8,7 @@ import { Guards } from './guards.utils'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const MathHelper = Object.freeze({
   /**
@@ -22,7 +22,7 @@ export const MathHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   clamp(value: number, min: number, max: number): number {
     return Math.min(Math.max(value, min), max)
@@ -38,7 +38,7 @@ export const MathHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   roundTo(value: number, decimals: number): number {
     const factor = 10 ** decimals
@@ -56,7 +56,7 @@ export const MathHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   safeDivide(numerator: number, denominator: number, fallback = 0): number {
     if (denominator === 0) return fallback
@@ -73,7 +73,7 @@ export const MathHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   toPercentage(part: number, total: number): number {
     if (total === 0) return 0
@@ -88,7 +88,7 @@ export const MathHelper = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   toNumber(value: Optional<unknown>, fallback = 0): number {
     if (!Guards.isDefined(value) || !Guards.isNumber(value)) return fallback

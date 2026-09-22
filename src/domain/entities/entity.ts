@@ -12,7 +12,7 @@ import type { IEntity } from './ientity.contracts'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export abstract class Entity<T> implements IEntity<T> {
   public readonly id: UniqueId
@@ -24,7 +24,7 @@ export abstract class Entity<T> implements IEntity<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   private readonly props: T
 
@@ -38,7 +38,7 @@ export abstract class Entity<T> implements IEntity<T> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   protected constructor(props: T, id: Optional<string> = undefined) {
     if (Guards.isNullOrEmpty(id) || GuidHelper.isValid(id)) {

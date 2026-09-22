@@ -9,7 +9,7 @@ import type { AuthClaims, Maybe, Optional, Provider, Session } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IBaseAuthService {
   /**
@@ -20,7 +20,7 @@ export interface IBaseAuthService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   isAuthenticated(): Promise<boolean>
 
@@ -38,7 +38,7 @@ export interface IBaseAuthService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   authenticate(token: string): Promise<ResultType<AuthClaims>>
 }
@@ -51,7 +51,7 @@ export interface IBaseAuthService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IAuthService {
   /**

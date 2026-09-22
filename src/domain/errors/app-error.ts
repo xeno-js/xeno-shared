@@ -8,7 +8,7 @@ import { ERROR_CODE_MESSAGES, ERROR_CODES, Guards, STATUS_CODES } from '@/shared
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 interface ErrorPayload {
   /** The error message describing the error.
@@ -16,7 +16,7 @@ interface ErrorPayload {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   message: string
   /** The error code representing the type of error.
@@ -24,7 +24,7 @@ interface ErrorPayload {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   code: string
   /** The HTTP status code associated with the error.
@@ -32,7 +32,7 @@ interface ErrorPayload {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   status: number
   /** The name of the error, typically the class name.
@@ -40,7 +40,7 @@ interface ErrorPayload {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   name: string
   /** An optional property to hold the original error or any additional context.
@@ -48,7 +48,7 @@ interface ErrorPayload {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   cause: Optional<unknown>
   /** A Dictionary to hold any additional context or information related to the error.
@@ -56,7 +56,7 @@ interface ErrorPayload {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   [key: string]: unknown
 }
@@ -69,7 +69,7 @@ interface ErrorPayload {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export class AppError extends Error {
   /**
@@ -79,7 +79,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public readonly code: string
   /**
@@ -89,7 +89,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public readonly status: number
 
@@ -99,7 +99,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly [key: string]: unknown
 
@@ -112,7 +112,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   private constructor(payload: ErrorPayload) {
     super(payload.message)
@@ -131,7 +131,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public static create(payload: ErrorPayload): AppError {
     return new AppError(payload)
@@ -146,7 +146,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public static throw(payload: ErrorPayload): never {
     throw new AppError(payload)
@@ -161,7 +161,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public static aborted(name: string): AppError {
     return new AppError({
@@ -182,7 +182,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public static throwIfAborted(signal: Maybe<AbortSignal>, name: string): void {
     if (Guards.isDefined(signal) && signal.aborted) {
@@ -198,7 +198,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   public static unauthorized(name: string, message: string): AppError {
     return AppError.create({
@@ -229,7 +229,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   public static forbidden(name: string, message: string): AppError {
     return AppError.create({
@@ -249,7 +249,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   public static badRequest(name: string, message: string): AppError {
     return AppError.create({
@@ -269,7 +269,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   public static validationError(name: string, message: string): AppError {
     return AppError.create({
@@ -289,7 +289,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   public static conflict(name: string, message: string): AppError {
     return AppError.create({
@@ -309,7 +309,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   public static notFound(name: string, message: string): AppError {
     return AppError.create({
@@ -329,7 +329,7 @@ export class AppError extends Error {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   public static authFailed(name: string, message: string): AppError {
     return AppError.create({

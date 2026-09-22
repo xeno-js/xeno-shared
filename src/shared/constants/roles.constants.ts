@@ -5,7 +5,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 
 /** @description An object containing the different roles available within the application. Each role is represented as a string value.
@@ -13,7 +13,7 @@
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export const ROLES = Object.freeze({
   /** @description The SUPER_ADMIN role, which typically has the highest level of permissions and access within the application.
@@ -21,7 +21,7 @@ export const ROLES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SUPER_ADMIN: 'super_admin',
   /** @description The ADMIN role, which typically has elevated permissions and access within the application, but may have some restrictions compared to the SUPER_ADMIN role.
@@ -29,7 +29,7 @@ export const ROLES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   ADMIN: 'admin',
   /** @description The USER role, which typically has standard permissions and access within the application, allowing them to perform regular user actions but with limited administrative capabilities.
@@ -37,7 +37,7 @@ export const ROLES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   USER: 'user',
   /** @description The GUEST role, which typically has the most limited permissions and access within the application, often used for unauthenticated users or users with very restricted access.
@@ -45,7 +45,7 @@ export const ROLES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   GUEST: 'guest',
 } as const)
@@ -55,7 +55,7 @@ export const ROLES = Object.freeze({
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export type Role = (typeof ROLES)[keyof typeof ROLES]
 
@@ -64,7 +64,7 @@ export type Role = (typeof ROLES)[keyof typeof ROLES]
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export const PERMISSIONS = Object.freeze({
   /** @description The READ permission, which typically allows access to resources or actions within the application that require read-only access.
@@ -72,7 +72,7 @@ export const PERMISSIONS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   READ: 'read',
 } as const)
@@ -82,6 +82,6 @@ export const PERMISSIONS = Object.freeze({
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export type Permission = (typeof PERMISSIONS)[keyof typeof PERMISSIONS]

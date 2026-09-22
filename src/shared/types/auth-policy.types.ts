@@ -5,7 +5,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface AuthPolicy {
   /**
@@ -13,18 +13,18 @@ export interface AuthPolicy {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js
    */
-  readonly userId?: boolean;
+  readonly userId?: boolean
 
   /**
    * An optional boolean flag indicating whether the authorization policy requires a tenant ID for authentication. If set to true, the policy enforces that a valid tenant ID must be present in the request context for authorization to succeed. This flag can be used to differentiate between policies that require tenant-level authentication and those that do not.
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js
    */
-  readonly tenantId?: boolean;
+  readonly tenantId?: boolean
 
   /**
    * An array of roles that are associated with the authorization policy. These roles define the access level and permissions granted to users who possess them. The roles can be used to determine whether a user is authorized to perform certain actions or access specific resources within the application.
@@ -33,7 +33,7 @@ export interface AuthPolicy {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly roles?: string[]
   /**
@@ -43,7 +43,7 @@ export interface AuthPolicy {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   readonly permissions?: string[]
 }

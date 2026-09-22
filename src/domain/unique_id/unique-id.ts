@@ -9,7 +9,7 @@ import { Guards, GuidHelper } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export class UniqueId {
   /**
@@ -21,7 +21,7 @@ export class UniqueId {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   private constructor(private readonly _value: Guid) {
     Object.freeze(this)
@@ -35,7 +35,7 @@ export class UniqueId {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public static create(id?: string): UniqueId {
     const uniqueId =
@@ -51,7 +51,7 @@ export class UniqueId {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public toString(): string {
     return this._value.toString()
@@ -65,7 +65,7 @@ export class UniqueId {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public getValue(): Guid {
     return this._value
@@ -80,7 +80,7 @@ export class UniqueId {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   public equals(other: UniqueId): boolean {
     if (!(other instanceof UniqueId)) {

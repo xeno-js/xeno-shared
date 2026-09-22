@@ -5,7 +5,7 @@
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 const DEFAULT_PAGE = 1
 
@@ -14,7 +14,7 @@ const DEFAULT_PAGE = 1
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 const DEFAULT_PAGE_SIZE = 20
 
@@ -23,7 +23,7 @@ const DEFAULT_PAGE_SIZE = 20
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 const MAX_PAGE_SIZE = 100
 
@@ -32,7 +32,7 @@ const MAX_PAGE_SIZE = 100
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export const PAGINATION_DEFAULTS = Object.freeze({
   /** @description Default page index (1-based).
@@ -40,7 +40,7 @@ export const PAGINATION_DEFAULTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   PAGE: DEFAULT_PAGE,
 
@@ -49,7 +49,7 @@ export const PAGINATION_DEFAULTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   PAGE_SIZE: DEFAULT_PAGE_SIZE,
 
@@ -58,7 +58,7 @@ export const PAGINATION_DEFAULTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   MAX_PAGE_SIZE,
 } as const)
@@ -73,7 +73,7 @@ export const PAGINATION_DEFAULTS = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const SORT_DIRECTION = Object.freeze({
   /** @description Ascending order (A → Z, 0 → 9, oldest → newest).
@@ -81,7 +81,7 @@ export const SORT_DIRECTION = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   ASC: 'asc',
 
@@ -90,7 +90,7 @@ export const SORT_DIRECTION = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   DESC: 'desc',
 } as const)
@@ -100,6 +100,6 @@ export const SORT_DIRECTION = Object.freeze({
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export type SortDirection = (typeof SORT_DIRECTION)[keyof typeof SORT_DIRECTION]

@@ -8,7 +8,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IMapper<TE, TDto> {
   /**
@@ -21,7 +21,7 @@ export interface IMapper<TE, TDto> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   toDto(entity: TE): TDto
 
@@ -35,7 +35,7 @@ export interface IMapper<TE, TDto> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   toEntity(dto: TDto): TE
 
@@ -48,7 +48,7 @@ export interface IMapper<TE, TDto> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   toPartialDto(entity: Partial<TE>): Partial<TDto>
 }

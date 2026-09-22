@@ -6,7 +6,7 @@ import type { Optional } from '@/shared'
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 
 /**
@@ -16,7 +16,7 @@ import type { Optional } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface ICache {
   /**
@@ -28,7 +28,7 @@ export interface ICache {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   get<T>(key: string): Promise<Optional<T>>
 
@@ -42,7 +42,7 @@ export interface ICache {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   set<T>(key: string, value: T, ttl: Optional<number>): Promise<void>
 
@@ -57,7 +57,7 @@ export interface ICache {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   setIfAbsent<T>(key: string, value: T, ttl: Optional<number>): Promise<boolean>
 
@@ -69,7 +69,7 @@ export interface ICache {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   remove(key: string): Promise<void>
 
@@ -82,7 +82,7 @@ export interface ICache {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   has(key: string): Promise<boolean>
 
@@ -93,7 +93,7 @@ export interface ICache {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   clear(): Promise<void>
 }

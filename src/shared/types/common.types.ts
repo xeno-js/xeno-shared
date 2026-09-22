@@ -8,7 +8,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Nullable<T> = T | null
 
@@ -20,7 +20,7 @@ export type Nullable<T> = T | null
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Optional<T> = T | undefined
 
@@ -32,7 +32,7 @@ export type Optional<T> = T | undefined
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Maybe<T> = T | null | undefined
 
@@ -48,7 +48,7 @@ export type Maybe<T> = T | null | undefined
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Constructor<T, TArgs extends Dictionary[] = Dictionary[]> = new (...args: TArgs) => T
 
@@ -63,7 +63,7 @@ export type Constructor<T, TArgs extends Dictionary[] = Dictionary[]> = new (...
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type AbstractConstructor<T> = abstract new (...args: Dictionary[]) => T
 
@@ -77,7 +77,7 @@ export type AbstractConstructor<T> = abstract new (...args: Dictionary[]) => T
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Dictionary<V = unknown> = Record<string, V>
 
@@ -89,7 +89,7 @@ export type Dictionary<V = unknown> = Record<string, V>
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type RequireKeys<T, K extends keyof T> = Omit<T, K> & Required<Pick<T, K>>
 
@@ -101,7 +101,7 @@ export type RequireKeys<T, K extends keyof T> = Omit<T, K> & Required<Pick<T, K>
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Override<T, K extends keyof T, V> = Omit<T, K> & Record<K, V>
 
@@ -116,7 +116,7 @@ export type Override<T, K extends keyof T, V> = Omit<T, K> & Record<K, V>
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type KeysOfType<T, V> = {
   [K in keyof T]: T[K] extends V ? K : never
@@ -146,7 +146,7 @@ export type KeysOfType<T, V> = {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Factory<T, TArgs extends unknown[] = []> = (...args: TArgs) => T
 
@@ -161,7 +161,7 @@ export type Factory<T, TArgs extends unknown[] = []> = (...args: TArgs) => T
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type AsyncFactory<T, TArgs extends unknown[] = []> = (...args: TArgs) => Promise<T>
 
@@ -192,7 +192,7 @@ export type AsyncFactory<T, TArgs extends unknown[] = []> = (...args: TArgs) => 
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Resolver<T = unknown> = (token: symbol) => T
 
@@ -206,7 +206,7 @@ export type Resolver<T = unknown> = (token: symbol) => T
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type AsyncResolver = <T>(token: symbol) => Promise<T>
 
@@ -220,7 +220,7 @@ export type AsyncResolver = <T>(token: symbol) => Promise<T>
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type Guid = `${string}-${string}-${string}-${string}-${string}`
 
@@ -232,6 +232,6 @@ export type Guid = `${string}-${string}-${string}-${string}-${string}`
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export type SetupAction<T, E = undefined> = (options: T, config: E) => void

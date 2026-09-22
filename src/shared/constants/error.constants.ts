@@ -7,7 +7,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const ERROR_CODES = Object.freeze({
   // ── Generic / System ─────────────────────────────────────────────────────
@@ -17,7 +17,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SYSTEM_ERROR: 'SYSTEM_ERROR',
 
@@ -26,7 +26,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   NOT_IMPLEMENTED: 'NOT_IMPLEMENTED',
 
@@ -35,7 +35,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   EXTERNAL_SERVICE_ERROR: 'EXTERNAL_SERVICE_ERROR',
 
@@ -44,7 +44,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   VALIDATION_FAILED: 'VALIDATION_FAILED',
 
@@ -53,7 +53,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   AUTHENTICATION_FAILED: 'AUTHENTICATION_FAILED',
 
@@ -62,7 +62,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   UNAUTHORIZED: 'UNAUTHORIZED',
 
@@ -71,7 +71,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   FORBIDDEN: 'FORBIDDEN',
 
@@ -80,7 +80,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   BAD_REQUEST: 'BAD_REQUEST',
 
@@ -89,7 +89,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   ABORTED: 'ABORTED',
 
@@ -98,7 +98,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SCOPE_NOT_AVAILABLE: 'SCOPE_NOT_AVAILABLE',
 
@@ -107,7 +107,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CONFLICT: 'CONFLICT',
   /** @description The requested resource does not exist.
@@ -115,7 +115,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   NOT_FOUND: 'NOT_FOUND',
 
@@ -124,7 +124,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   HANDLER_NOT_FOUND: 'HANDLER_NOT_FOUND',
 
@@ -133,7 +133,7 @@ export const ERROR_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   PIPELINE_NOT_AVAILABLE: 'PIPELINE_NOT_AVAILABLE',
 
@@ -147,7 +147,7 @@ export const ERROR_CODES = Object.freeze({
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export type ErrorCode = (typeof ERROR_CODES)[keyof typeof ERROR_CODES]
 
@@ -162,7 +162,7 @@ export type ErrorCode = (typeof ERROR_CODES)[keyof typeof ERROR_CODES]
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const STATUS_CODES = Object.freeze({
   // ── 2xx Success ───────────────────────────────────────────────────────────
@@ -172,7 +172,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   OK: 200,
 
@@ -181,7 +181,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CREATED: 201,
 
@@ -190,7 +190,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   NO_CONTENT: 204,
 
@@ -201,7 +201,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   BAD_REQUEST: 400,
 
@@ -210,7 +210,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   UNAUTHORIZED: 401,
 
@@ -219,7 +219,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   FORBIDDEN: 403,
 
@@ -228,7 +228,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   NOT_FOUND: 404,
 
@@ -239,7 +239,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   CONFLICT: 409,
 
@@ -248,7 +248,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   UNPROCESSABLE_ENTITY: 422,
 
@@ -257,7 +257,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   TOO_MANY_REQUESTS: 429,
 
@@ -266,7 +266,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   ABORTED: 499,
 
@@ -277,7 +277,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   INTERNAL_SERVER_ERROR: 500,
 
@@ -286,7 +286,7 @@ export const STATUS_CODES = Object.freeze({
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   SERVICE_UNAVAILABLE: 503,
 } as const)
@@ -296,7 +296,7 @@ export const STATUS_CODES = Object.freeze({
  * @author Xeno
  * @version 1.0.0
  * @since 2025-09-30
- * @link https://github.com/Mattia-Carcione/xeno-js
+ * @link https://github.com/xeno-js/xeno-js
  */
 export type StatusCode = (typeof STATUS_CODES)[keyof typeof STATUS_CODES]
 
@@ -307,7 +307,7 @@ export type StatusCode = (typeof STATUS_CODES)[keyof typeof STATUS_CODES]
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export const ERROR_CODE_MESSAGES: Record<ErrorCode, string> = Object.freeze({
   [ERROR_CODES.SYSTEM_ERROR]: 'errors.system_error',

@@ -5,7 +5,7 @@
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IConcurrencyService {
   /**
@@ -18,7 +18,7 @@ export interface IConcurrencyService {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
   executeInParallel<T>(tasks: (() => Promise<T>)[], concurrencyLimit: number): Promise<T[]>
 }

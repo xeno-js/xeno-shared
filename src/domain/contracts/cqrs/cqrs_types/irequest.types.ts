@@ -7,7 +7,7 @@ import type { RequestType } from '@/shared'
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js 
+   * @link https://github.com/xeno-js/xeno-js 
    */
 export interface IRequest<TResponse = unknown> {
   readonly $type?: TResponse
@@ -16,7 +16,7 @@ export interface IRequest<TResponse = unknown> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly intent: string
   /** @description The type of the request, which can be used to distinguish between different kinds of requests (e.g., command, query).
@@ -24,7 +24,7 @@ export interface IRequest<TResponse = unknown> {
    * @author Xeno
    * @version 1.0.0
    * @since 2025-09-30
-   * @link https://github.com/Mattia-Carcione/xeno-js
+   * @link https://github.com/xeno-js/xeno-js
    */
   readonly type: RequestType
 }
