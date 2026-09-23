@@ -32,6 +32,32 @@ import { Guards } from './guards.utils'
    */
 export const HttpHelper = Object.freeze({
   /**
+   * @description A function that masks the IP address in the given headers object.
+   * @param ip The IP address to mask.
+   * @returns The masked IP address.
+   */
+  maskIp(ip: Optional<string>): Optional<string> {
+    if (!Guards.isDefined(ip)) return undefined
+
+    if (ip.includes('.')) {
+      const parts = ip.split('.')
+      if (parts.length === 4) {
+        parts[3] = 'x'
+        return parts.join('.')
+      }
+    }
+
+    if (ip.includes(':')) {
+      const parts = ip.split(':')
+      if (parts.length > 0) {
+        parts[parts.length - 1] = 'x'
+        return parts.join(':')
+      }
+    }
+
+    return ip
+  },
+  /**
    * @description Normalizes HTTP headers by converting all header values to strings. If a header value is an array, it joins the array elements into a single string separated by commas. This method ensures that the headers are in a consistent format, which can be particularly useful when working with different HTTP client libraries that may represent headers in various ways. If the input headers are not defined or not an object, it returns an empty object.
    * @param headers The input headers to be normalized, which can be of any type. The method checks if the headers are defined and are an object before processing them.
    * @returns An object containing the normalized headers, where each header value is a string. If the input headers were not valid, it returns an empty object.
