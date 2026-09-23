@@ -61,6 +61,16 @@ export interface NetworkContext {
   readonly csrf: Optional<string>
 
   /**
+   * @description The CSRF cookie for the request, which can be used for preventing cross-site request forgery attacks.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/xeno-js/xeno-js
+   */
+  readonly csrfCookie: Optional<string>
+
+  /**
    * @description The transport used for the request, which can be used for logging, monitoring, or applying specific middleware logic.
    *
    * @author Xeno

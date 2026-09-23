@@ -197,20 +197,14 @@ flows from feature branches ➡️ `develop` ➡️ `main`._
 
 ### Scripts
 
-| Command             | Description                                        |
-| ------------------- | -------------------------------------------------- |
-| `npm run build`     | Builds the TypeScript source code into `dist/`<br> |
-| `npm run typecheck` | Checks types without emitting files                |
-
-| | `npm run lint` | Runs ESLint
-
-| | `npm run format` | Formats code with Prettier
-
-| | `npm run test` | Runs the Vitest test suite
-
-| | `npm run test:coverage` | Runs tests and generates a coverage report
-
-|
+| Command                 | Description                                        |
+| ----------------------- | -------------------------------------------------- |
+| `npm run build`         | Builds the TypeScript source code into `dist/`<br> |
+| `npm run typecheck`     | Checks types without emitting files                |
+| `npm run lint`          | Runs ESLint                                        |
+| `npm run format`        | Formats code with Prettier                         |
+| `npm run test`          | Runs the Vitest test suite                         |
+| `npm run test:coverage` | Runs tests and generates a coverage report         |
 
 ### Code Quality (Husky & Git Hooks)
 
