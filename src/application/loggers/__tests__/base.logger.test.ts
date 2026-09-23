@@ -5,6 +5,7 @@ import type { Guid, LogLevel } from '@/shared'
 import { LOG_LEVEL, LOG_LEVEL_NAMES } from '@/shared'
 
 import { BaseLogger } from '../base.logger'
+import { LoggerUtils } from '../utils'
 
 const makeRequestContext = (
   executionContext?: RequestContext,
@@ -32,6 +33,7 @@ const makeExecutionContext = (): RequestContext => ({
       req: '',
     },
     csrf: undefined,
+    csrfCookie: '',
     origin: 'http://localhost:3000',
   },
   tracing: {
@@ -47,11 +49,13 @@ describe('BaseLogger', () => {
   let trackMock: ReturnType<typeof vi.fn>
   let requestContext: IContextAccessor<RequestContext>
   let executionContext: RequestContext
+  let expectedSafeContext: ReturnType<typeof LoggerUtils.toSafeContext>
 
   beforeEach(() => {
     trackMock = vi.fn()
     executionContext = makeExecutionContext()
     requestContext = makeRequestContext(executionContext)
+    expectedSafeContext = LoggerUtils.toSafeContext(executionContext)
   })
 
   describe('info()', (): void => {
@@ -64,7 +68,7 @@ describe('BaseLogger', () => {
       expect(trackMock).toHaveBeenCalledWith(
         LOG_LEVEL.INFO,
         `[${LOG_LEVEL_NAMES[LOG_LEVEL.INFO]}] hello`,
-        executionContext,
+        expectedSafeContext,
         undefined,
       )
     })
@@ -87,7 +91,7 @@ describe('BaseLogger', () => {
       expect(trackMock).toHaveBeenCalledWith(
         LOG_LEVEL.WARN,
         `[${LOG_LEVEL_NAMES[LOG_LEVEL.WARN]}] careful`,
-        executionContext,
+        expectedSafeContext,
         undefined,
       )
     })
@@ -110,7 +114,7 @@ describe('BaseLogger', () => {
       expect(trackMock).toHaveBeenCalledWith(
         LOG_LEVEL.DEBUG,
         `[${LOG_LEVEL_NAMES[LOG_LEVEL.DEBUG]}] verbose`,
-        executionContext,
+        expectedSafeContext,
         undefined,
       )
     })
@@ -134,12 +138,12 @@ describe('BaseLogger', () => {
       expect(trackMock).toHaveBeenCalledWith(
         LOG_LEVEL.ERROR,
         `[${LOG_LEVEL_NAMES[LOG_LEVEL.ERROR]}] something went wrong`,
-        executionContext,
+        expectedSafeContext,
         err,
       )
     })
 
-    it('does NOT forward ERROR when minLevel is above ERROR (impossible in practice but tests boundary)', (): void => {
+    it('does NOT forward ERROR when minLevel is above ERROR', (): void => {
       const client: ILoggerClient = { track: trackMock as ILoggerClient['track'] }
       const logger = new BaseLogger(requestContext, (LOG_LEVEL.ERROR + 1) as LogLevel, [client])
       logger.error('silent', new Error('x'))
@@ -148,7 +152,7 @@ describe('BaseLogger', () => {
   })
 
   describe('broadcast — context handling', (): void => {
-    it('passes undefined context when getContext() returns undefined', (): void => {
+    it('passes safe undefined context when getContext() returns undefined', (): void => {
       const ctxWithoutData = makeRequestContext(undefined)
       const client: ILoggerClient = { track: trackMock as ILoggerClient['track'] }
       const logger = new BaseLogger(ctxWithoutData, LOG_LEVEL.INFO, [client])
@@ -157,7 +161,7 @@ describe('BaseLogger', () => {
       expect(trackMock).toHaveBeenCalledWith(
         LOG_LEVEL.INFO,
         `[${LOG_LEVEL_NAMES[LOG_LEVEL.INFO]}] no context`,
-        undefined,
+        LoggerUtils.toSafeContext(undefined),
         undefined,
       )
     })

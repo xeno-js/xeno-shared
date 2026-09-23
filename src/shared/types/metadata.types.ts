@@ -90,6 +90,15 @@ export interface Metadata {
    * @link https://github.com/xeno-js/xeno-js
    */
   readonly csrf: Optional<string>
+  /**
+   * @description An optional CSRF cookie for preventing cross-site request forgery attacks.
+   *
+   * @author Xeno
+   * @version 1.0.0
+   * @since 2025-09-30
+   * @link https://github.com/xeno-js/xeno-js
+   */
+  readonly csrfCookie: Optional<string>
   /** An optional origin for the request, which can be used for security and access control purposes.
    *
    * @author Xeno
