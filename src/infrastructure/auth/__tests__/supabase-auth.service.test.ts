@@ -12,6 +12,9 @@ describe('SupabaseAuthService', () => {
   const getUserMock = vi.fn()
   const getSessionMock = vi.fn()
   const mapMock = vi.fn()
+  const exchangeCodeForSessionMock = vi.fn()
+  const signInWithOAuthMock = vi.fn()
+  const signOutMock = vi.fn()
 
   let mockSupabaseClient: SupabaseClient
   let mockMapper: IBaseMapper<User, AuthClaims>
@@ -28,6 +31,9 @@ describe('SupabaseAuthService', () => {
       auth: {
         getUser: getUserMock,
         getSession: getSessionMock,
+        exchangeCodeForSession: exchangeCodeForSessionMock,
+        signInWithOAuth: signInWithOAuthMock,
+        signOut: signOutMock,
       },
     } as unknown as SupabaseClient
 
@@ -156,6 +162,87 @@ describe('SupabaseAuthService', () => {
       // Assert
       expect(getSessionMock).toHaveBeenCalledOnce()
       expect(isAuth).toBe(false)
+    })
+  })
+  describe('remaining auth operations', () => {
+    it('should exchange a code and map the session', async () => {
+      const supabaseSession = {} as SupabaseSession
+      const expectedSession = { accessToken: 'token' } as Session
+      exchangeCodeForSessionMock.mockResolvedValue({
+        data: { session: supabaseSession },
+        error: null,
+      })
+      mapMock.mockReturnValue(expectedSession)
+
+      const result = await sut.exchangeCodeForSession('code')
+
+      expect(exchangeCodeForSessionMock).toHaveBeenCalledWith('code')
+      expect(result.getValueOrThrow()).toBe(expectedSession)
+    })
+
+    it('should fail when exchanging a code fails or has no session', async () => {
+      exchangeCodeForSessionMock.mockResolvedValue({
+        data: { session: null },
+        error: { message: 'bad code' },
+      })
+      expect((await sut.exchangeCodeForSession('bad')).isOk()).toBe(false)
+      exchangeCodeForSessionMock.mockResolvedValue({ data: { session: null }, error: null })
+      expect((await sut.exchangeCodeForSession('empty')).isOk()).toBe(false)
+    })
+
+    it('should handle provider sign-in success and failures', async () => {
+      signInWithOAuthMock.mockResolvedValue({ data: { url: 'https://auth.test' }, error: null })
+      expect((await sut.signInWithProvider('google')).getValueOrThrow()).toEqual({
+        url: 'https://auth.test',
+      })
+      signInWithOAuthMock.mockResolvedValue({ data: { url: '' }, error: null })
+      expect((await sut.signInWithProvider('google')).isOk()).toBe(false)
+      signInWithOAuthMock.mockResolvedValue({
+        data: { url: null },
+        error: { message: 'oauth failed' },
+      })
+      expect((await sut.signInWithProvider('google')).isOk()).toBe(false)
+    })
+
+    it('should get, map, and handle absent or failed sessions', async () => {
+      const supabaseSession = {} as SupabaseSession
+      const expectedSession = { accessToken: 'token' } as Session
+      getSessionMock.mockResolvedValue({ data: { session: supabaseSession }, error: null })
+      mapMock.mockReturnValue(expectedSession)
+      expect((await sut.getSession()).getValueOrThrow()).toBe(expectedSession)
+      getSessionMock.mockResolvedValue({ data: { session: null }, error: null })
+      expect((await sut.getSession()).getValueOrThrow()).toBeUndefined()
+      getSessionMock.mockResolvedValue({
+        data: { session: null },
+        error: { message: 'session failed' },
+      })
+      expect((await sut.getSession()).isOk()).toBe(false)
+    })
+
+    it('should get and map users, sign out, and return session tokens', async () => {
+      const user = { id: 'user' } as User
+      const claims = { sub: 'user' } as AuthClaims
+      getUserMock.mockResolvedValue({ data: { user }, error: null })
+      mapMock.mockReturnValue(claims)
+      expect((await sut.getUser()).getValueOrThrow()).toBe(claims)
+      getUserMock.mockResolvedValue({ data: { user: null }, error: null })
+      expect((await sut.getUser()).getValueOrThrow()).toBeUndefined()
+      getUserMock.mockResolvedValue({ data: { user: null }, error: { message: 'user failed' } })
+      expect((await sut.getUser()).isOk()).toBe(false)
+      signOutMock.mockResolvedValue({ error: null })
+      expect((await sut.signOut()).isOk()).toBe(true)
+      signOutMock.mockResolvedValue({ error: { message: 'sign out failed' } })
+      expect((await sut.signOut()).isOk()).toBe(false)
+      getSessionMock.mockResolvedValue({ data: { session: {} }, error: null })
+      mapMock.mockReturnValue({ accessToken: 'token' })
+      expect((await sut.getSessionToken()).getValueOrThrow()).toBe('token')
+      getSessionMock.mockResolvedValue({ data: { session: null }, error: null })
+      expect((await sut.getSessionToken()).getValueOrThrow()).toBeUndefined()
+      getSessionMock.mockResolvedValue({
+        data: { session: null },
+        error: { message: 'token failed' },
+      })
+      expect((await sut.getSessionToken()).isOk()).toBe(false)
     })
   })
 })
