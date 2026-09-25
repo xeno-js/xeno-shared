@@ -196,10 +196,23 @@ export interface HttpResponse<TData = unknown> {
   readonly data: TData
 }
 
+/**
+ * @description Represents the CookieOptions interface.
+ *
+ * @author Xeno
+ * @version 1.0.0
+ * @since 2025-09-30
+ * @link https://github.com/xeno-js/xeno-js
+ */
 export interface CookieOptions {
+  /** @description The path for which the cookie is valid. Defaults to '/'. */
   path?: Optional<string>
+  /** @description The value of the maximum age in seconds. If not specified, the cookie will expire when the browser session ends. */
   maxAge?: Optional<number>
-  sameSite?: Optional<'lax' | 'strict' | 'none' | boolean>
-  secure?: boolean
+  /** @description The domain for which the cookie is valid. Defaults to the domain of the current document host. */
   domain?: Optional<string>
+  /** @description Whether the cookie is only transmitted over secure (HTTPS) connections. Defaults to true in production. */
+  secure?: Optional<boolean>
+  /** @description Controls whether the cookie is withheld on cross-site requests, providing some protection against cross-site request forgery attacks. */
+  sameSite?: Optional<'lax' | 'strict' | 'none' | boolean>
 }
