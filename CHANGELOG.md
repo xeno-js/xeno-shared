@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.0.html).
 
-## [0.1.6] - 2026-05-27
+## [0.1.6] - 2026-09-24
 
 ### Added
 
@@ -35,3 +35,9 @@ and this project adheres to
 
 - Integrated automated client IP masking and log scrubbing routines to ensure
   strict compliance with privacy standards.
+
+## [0.1.7] - 2026-09-25
+
+### Refactoring
+
+- **core:** cleanup unused tokens and rename interface for auth
