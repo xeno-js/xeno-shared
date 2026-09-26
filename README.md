@@ -1,19 +1,24 @@
 <div align="center">
   <img src="logo/logo.png" alt="Xeno Shared Logo" width="140" />
 
-  <h1>Xeno Shared</h1>
+  <h1>@xeno-js/shared</h1>
 
-  <p><em>Enterprise-grade primitive types, constants, and utilities for the Xeno ecosystem</em></p>
+  <p><strong>Domain primitives and application contracts for TypeScript.</strong></p>
 
   <p>
-    <a href="https://github.com/xeno-js/xeno-js">
-      <img src="https://img.shields.io/badge/Powered%20by-Xeno-blueviolet?style=flat-square" alt="Powered by Xeno" />
-    </a>
-    <a href="https://github.com/xeno-js/xeno-shared/blob/main/LICENSE">
-      <img src="https://img.shields.io/npm/l/@xeno-js/shared?style=flat-square" alt="License: ISC" />
+    Define your domain model, application contracts, and architectural boundaries
+    without coupling them to a transport or framework.
+  </p>
+
+  <p>
+    <a href="https://github.com/xeno-js/xeno-shared">
+      <img src="https://img.shields.io/github/stars/xeno-js/xeno-shared?style=flat-square" alt="GitHub Stars" />
     </a>
     <a href="https://www.npmjs.com/package/@xeno-js/shared">
-      <img src="https://img.shields.io/npm/v/@xeno-js/shared?style=flat-square" alt="NPM Version" />
+      <img src="https://img.shields.io/npm/v/@xeno-js/shared?style=flat-square" alt="npm version" />
+    </a>
+    <a href="https://github.com/xeno-js/xeno-shared/blob/develop/LICENSE">
+      <img src="https://img.shields.io/npm/l/@xeno-js/shared?style=flat-square" alt="License: ISC" />
     </a>
     <a href="https://buymeacoffee.com/xenojs">
       <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-FFdd00?style=flat-square&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
@@ -23,246 +28,625 @@
 
 ---
 
-## What is Xeno Shared?
+## What is `@xeno-js/shared`?
 
-**Xeno Shared** (`@xeno-js/shared`) is the foundational package for the entire
-Xeno framework ecosystem. It acts as the core dependency bridging both the
-backend (`@xeno-js/core`) and frontend (`@xeno-js/vue`) implementations.
+`@xeno-js/shared` provides the **domain primitives and framework-neutral
+contracts** used across the Xeno ecosystem.
 
-This package is meticulously designed to provide zero-dependency (where
-possible), highly optimized primitives, enforcing structural consistency, type
-safety, and architectural boundaries across all Xeno modules. It guarantees that
-constants, interfaces, and utilities behave identically whether executed in a
-Node.js server or a browser environment.
+It gives TypeScript applications explicit building blocks for:
 
----
+- Domain-Driven Design
+- aggregates and value objects
+- domain events
+- entities and domain errors
+- Result-based application flows
+- CQRS contracts
+- repositories and data sources
+- application services and policies
+- request and execution context
+- transactions and infrastructure boundaries
 
-## 💡 Key Features & Offerings
+The goal is simple:
 
-- **Universal Type Definitions**: Centralizes critical `TypeScript` interfaces
-  and types (`ResponseDto`, `IPaginatedResult`, `ICommand`, `IQuery`,
-  `InjectionToken`) to ensure a unified contract between the client and server.
-- **Agnostic Constants**: Exports canonical constants (`STATUS_CODES`,
-  `ERROR_CODES`, `LOG_LEVEL`, `REQUEST_TYPE`) preventing magic strings/numbers
-  and maintaining unified semantics across the infrastructure.
-- **Validation & Guards**: Provides the `Guards` utility object for robust,
-  zero-magic runtime type checking and validation (e.g., `isDefined`,
-  `isNullOrEmpty`, `isDate`).
-- **Resiliency & Async Utilities**: Includes `PromiseHelper` for advanced async
-  timing logic (delays, jitter for mitigating thundering herds) and constants
-  for `Cockatiel` resilience policies (`RESILIENCE_DEFAULTS`).
-- **Security Primitives**: Features `SanitizeHelper` to enforce OWASP guidelines
-  against Log Injection (CWE-117) and unsafe URIs.
-- **Shared Infrastructural Adapters**: Includes base infrastructural classes and
-  mappers (e.g., `ReadDao`, `Repository`, `ConsoleLogger`, `AxiosHttpClient`,
-  `SupabaseClaimsMapper`) allowing downstream packages to extend them.
+> **Keep the meaning of your application explicit in code.**
+
+`@xeno-js/shared` defines the contracts.
+
+`@xeno-js/core` provides the runtime architecture that executes them.
+
+Your HTTP framework, CLI, worker, or other transport remains outside that
+boundary.
 
 ---
 
-## 📦 Installation
+## The Xeno architecture
 
-This package is typically installed automatically as a dependency of
-`@xeno-js/core` or `@xeno-js/vue`. If you need to install it directly for shared
-domain logic in a monorepo:
+Xeno separates **what an application means** from **how the application runs**.
+
+```text
+┌─────────────────────────────────────────────┐
+│              Transport / Host               │
+│   HTTP · CLI · Worker · gRPC · Scheduler    │
+└──────────────────────┬──────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────┐
+│                @xeno-js/core                │
+│                                             │
+│  DI · scopes · request context · pipelines  │
+│  CQRS execution · modules · infrastructure  │
+└──────────────────────┬──────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────┐
+│              @xeno-js/shared                │
+│                                             │
+│  Domain model · contracts · Result · errors │
+│  aggregates · value objects · domain events │
+│  application interfaces                     │
+└─────────────────────────────────────────────┘
+```
+
+This separation lets the domain and application contracts remain independent
+from the transport hosting them.
+
+---
+
+## Why Shared?
+
+Most application frameworks start from the transport:
+
+```text
+HTTP request
+    ↓
+controller
+    ↓
+service
+    ↓
+database
+```
+
+Xeno starts from the application model instead:
+
+```text
+Domain
+    ↓
+Application contracts
+    ↓
+Execution model
+    ↓
+Transport
+```
+
+That distinction matters when an application grows.
+
+The HTTP layer should not define your domain model.
+
+Your database should not define your application contracts.
+
+And your infrastructure should not become the place where business rules live.
+
+`@xeno-js/shared` provides the primitives and contracts that make those
+boundaries explicit.
+
+---
+
+# Domain primitives
+
+## Aggregate roots
+
+`AggregateRoot` provides a base abstraction for aggregates that need:
+
+- an explicit identity
+- aggregate versioning
+- domain event application
+- loading from event history
+- tracking of uncommitted domain events.
+
+```ts
+import { AggregateRoot } from '@xeno-js/shared'
+
+class UserId {
+  // ...
+}
+
+type UserEvent =
+  | {
+      type: 'UserCreated'
+      name: string
+    }
+  | {
+      type: 'UserRenamed'
+      name: string
+    }
+
+class User extends AggregateRoot<UserEvent> {
+  private name = ''
+
+  public rename(name: string): void {
+    this.raise({
+      eventType: 'UserRenamed',
+      payload: {
+        type: 'UserRenamed',
+        name,
+      },
+    })
+  }
+
+  protected apply(event: IDomainEvent<UserEvent>, isNew: boolean): void {
+    switch (event.eventType) {
+      case 'UserRenamed':
+        this.name = event.payload.name
+        break
+    }
+  }
+}
+```
+
+An aggregate keeps its domain changes explicit:
+
+```text
+Aggregate
+   │
+   ├── identity
+   ├── version
+   ├── state
+   │
+   └── uncommitted events
+            │
+            ▼
+       IDomainEvent
+```
+
+`AggregateRoot` does not provide an event store. It provides the aggregate-side
+primitives required to model and track domain events.
+
+---
+
+## Domain events
+
+`IDomainEvent` defines a framework-neutral representation of an event produced
+by an aggregate.
+
+```ts
+export interface IDomainEvent<
+  TPayload = unknown,
+  TValueObject extends object = object,
+> {
+  readonly aggregateId: TValueObject
+  readonly eventType: string
+  readonly version: number
+  readonly occurredAt: Date
+  readonly payload: TPayload
+}
+```
+
+A domain event carries:
+
+- the aggregate identity
+- an explicit event type
+- the aggregate version
+- the occurrence timestamp
+- the event payload.
+
+This makes domain changes representable without coupling the domain model to an
+HTTP server, database driver, or message broker.
+
+---
+
+## Value objects
+
+Value objects provide domain concepts whose meaning comes from their value
+rather than object identity.
+
+```ts
+import { ValueObject } from '@xeno-js/shared'
+
+interface EmailProps {
+  value: string
+}
+
+class Email extends ValueObject<EmailProps> {
+  public static create(value: string): Email {
+    return new Email({ value })
+  }
+}
+```
+
+The base implementation provides:
+
+- immutable properties
+- value retrieval
+- equality comparison
+- string representation.
+
+```ts
+const first = Email.create('user@example.com')
+const second = Email.create('user@example.com')
+
+first.equals(second) // true
+```
+
+---
+
+# Application contracts
+
+The package also defines contracts used to keep application code independent
+from concrete infrastructure.
+
+These include abstractions for areas such as:
+
+- CQRS
+- repositories
+- data sources
+- services
+- factories
+- policies
+- transactions
+- request context
+- middleware
+- logging
+- caching
+- storage
+- HTTP
+- mapping
+- idempotency.
+
+The important distinction is between the **contract** and its implementation.
+
+For example:
+
+```text
+Application
+    │
+    │ depends on
+    ▼
+Repository contract
+    │
+    │ implemented by
+    ▼
+Infrastructure adapter
+```
+
+The application therefore does not need to know whether data is stored in
+PostgreSQL, Supabase, Redis, or another persistence mechanism.
+
+---
+
+# CQRS contracts
+
+`@xeno-js/shared` includes the contracts used to model commands and queries.
+
+```text
+Command
+   │
+   ▼
+Application handler
+   │
+   ▼
+Domain
+```
+
+and:
+
+```text
+Query
+   │
+   ▼
+Application handler
+   │
+   ▼
+Read model / data source
+```
+
+The package defines the contracts.
+
+`@xeno-js/core` provides the execution infrastructure around them.
+
+This distinction keeps CQRS from becoming tied to a particular transport.
+
+---
+
+# Result and errors
+
+Application code often needs to represent an expected failure without turning
+every business outcome into an exception.
+
+Xeno provides `Result` primitives alongside application/domain errors.
+
+Conceptually:
+
+```text
+Operation
+   │
+   ├── success → Result success
+   │
+   └── expected failure → Result failure
+```
+
+This allows application boundaries to make outcomes explicit while keeping error
+handling independent from the HTTP layer.
+
+---
+
+# Runtime utilities
+
+The package also contains shared runtime utilities used across the Xeno
+ecosystem.
+
+These include utilities for areas such as:
+
+- runtime guards
+- strings
+- dates
+- enumerables
+- GUIDs
+- promises
+- HTTP helpers
+- sanitization
+- abort handling
+- mathematical helpers.
+
+These utilities are deliberately secondary to the architectural role of the
+package.
+
+The purpose of `@xeno-js/shared` is not to be a generic utility collection.
+
+Its primary role is to provide **shared domain and application building
+blocks**.
+
+---
+
+# Infrastructure adapters
+
+`@xeno-js/shared` also exports a limited set of reusable infrastructure
+components, including integrations and adapters for areas such as:
+
+- HTTP clients
+- Supabase authentication
+- caching
+- storage
+- validation
+- mapping
+- factories.
+
+These are exported as reusable building blocks; they do not define the
+architecture of the application.
+
+For applications using `@xeno-js/core`, infrastructure can be composed through
+the application architecture rather than becoming part of the domain model.
+
+---
+
+# Framework independent by design
+
+`@xeno-js/shared` does not define an HTTP application lifecycle.
+
+You can model your domain and application contracts without choosing a
+particular HTTP framework.
+
+For example:
+
+```text
+                 ┌── Fastify
+                 │
+                 ├── Express
+Application ─────┼── Hono
+                 │
+                 ├── CLI
+                 │
+                 └── Worker
+```
+
+The transport is the host.
+
+The domain and application contracts remain the application model.
+
+---
+
+# Installation
 
 ```bash
 npm install @xeno-js/shared
-
 ```
 
-Xeno uses **Optional Peer Dependencies**. You only install the external
-libraries you actually need.
+For the complete Xeno application architecture:
 
 ```bash
-# Example: Install tools only if you enable them
-npm install axios cockatiel zod @supabase/supabase-js
+npm install @xeno-js/core
+```
 
+You can use `@xeno-js/shared` independently when you only need the domain and
+application building blocks.
+
+---
+
+# `@xeno-js/shared` vs `@xeno-js/core`
+
+The two packages have different responsibilities.
+
+| Package             | Responsibility                                      |
+| ------------------- | --------------------------------------------------- |
+| `@xeno-js/shared`   | Domain primitives and application contracts         |
+| `@xeno-js/core`     | Application runtime and architecture                |
+| Your transport      | HTTP, CLI, worker, gRPC, etc.                       |
+| Your infrastructure | Database, cache, external services, messaging, etc. |
+
+A useful mental model is:
+
+```text
+@xeno-js/shared
+    defines the language
+
+        ↓
+
+@xeno-js/core
+    executes the architecture
+
+        ↓
+
+your application
+    defines the business behavior
+
+        ↓
+
+your transport / infrastructure
+    hosts and connects the system
 ```
 
 ---
 
-## 📖 Core Usage Examples
+# What `@xeno-js/shared` is not
 
-### 1. Unified API Responses
+`@xeno-js/shared` is not:
 
-Use `HttpHelper` to generate standardized success and error payloads.
+- an HTTP framework
+- an application server
+- an ORM
+- an event bus
+- an event store
+- a complete event-sourcing framework
+- a replacement for your transport framework.
 
-```typescript
-import { HttpHelper, STATUS_CODES, ERROR_CODES } from '@xeno-js/shared'
-
-// Success Response
-const response = HttpHelper.success(
-  { id: 1, name: 'Xeno' },
-  STATUS_CODES.CREATED,
-)
-
-// Error Response
-const errorResponse = HttpHelper.error(
-  {
-    success: false,
-    error: {
-      code: ERROR_CODES.VALIDATION_FAILED,
-      message: 'Invalid input provided',
-    },
-    correlationId: '...',
-    requestId: '...',
-    spanId: '...',
-    timestamp: new Date().toISOString(),
-  },
-  STATUS_CODES.BAD_REQUEST,
-)
-```
-
-### 2. Runtime Type Guards
-
-Use the `Guards` namespace to ensure bulletproof runtime checks.
-
-```typescript
-import { Guards } from '@xeno-js/shared'
-
-function processData(payload: unknown) {
-  if (Guards.isNullOrEmpty(payload)) {
-    throw new Error('Payload cannot be empty')
-  }
-
-  if (Guards.isString(payload)) {
-    console.log(payload.toUpperCase())
-  }
-}
-```
-
-### 3. Asynchronous Jitter
-
-Use `PromiseHelper` to stagger requests and avoid network congestion.
-
-```typescript
-import { PromiseHelper } from '@xeno-js/shared'
-
-async function fetchWithRetry() {
-  const BASE_DELAY = 100
-  const MAX_JITTER = 50
-
-  // Wait for 100ms + a random value up to 50ms
-  await PromiseHelper.delayWithJitter(BASE_DELAY, MAX_JITTER)
-  return performNetworkCall()
-}
-```
+It provides the primitives and contracts that let those concerns remain
+separated from the domain model.
 
 ---
 
-## 🤝 For Contributors
+# Design principles
 
-We welcome contributions to Xeno! To maintain the highest code quality and
-stability of the core framework, **direct pushes to the `main` and `develop`
-branches are strictly prohibited.** Please follow this Git Flow to contribute:
+The package follows a few simple principles.
 
-1. **Branch off from `develop**`: Create a new branch for your feature or
-   bugfix.
+### Explicit contracts
+
+Important application boundaries should be represented by explicit TypeScript
+contracts.
+
+### Domain first
+
+Business concepts such as aggregates, value objects and domain events should not
+depend on transport details.
+
+### Infrastructure at the boundary
+
+Concrete integrations belong outside the domain model.
+
+### Framework independence
+
+Domain and application contracts should not require a specific HTTP framework.
+
+### Composition over magic
+
+The architecture should be understandable from the code rather than depending on
+runtime discovery or hidden conventions.
+
+---
+
+# Relationship with Xeno
+
+The Xeno ecosystem can be understood as three layers:
+
+```text
+             Your application
+                    │
+                    ▼
+          ┌───────────────────┐
+          │   @xeno-js/core   │
+          │                   │
+          │ Runtime           │
+          │ DI                │
+          │ Scopes            │
+          │ CQRS execution    │
+          │ Pipelines         │
+          │ Request context   │
+          └─────────┬─────────┘
+                    │
+                    ▼
+          ┌───────────────────┐
+          │ @xeno-js/shared   │
+          │                   │
+          │ Domain            │
+          │ Contracts         │
+          │ Result / Errors   │
+          │ Aggregates        │
+          │ Value Objects     │
+          │ Domain Events     │
+          └───────────────────┘
+```
+
+The transport sits around the application rather than defining it.
+
+> **Shared defines the contracts. Core executes the architecture. Your transport
+> hosts the application.**
+
+---
+
+# Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/xeno-js/xeno-shared.git
+cd xeno-shared
+npm install
+```
+
+Run the main checks:
+
+```bash
+npm run check
+```
+
+Available scripts:
+
+| Command                 | Description                  |
+| ----------------------- | ---------------------------- |
+| `npm run build`         | Build the package            |
+| `npm run typecheck`     | Run TypeScript type checking |
+| `npm run lint`          | Run ESLint                   |
+| `npm run format`        | Format the repository        |
+| `npm run format:check`  | Check formatting             |
+| `npm run test`          | Run tests                    |
+| `npm run test:watch`    | Run tests in watch mode      |
+| `npm run test:coverage` | Run tests with coverage      |
+| `npm run check`         | Typecheck, lint and test     |
+| `npm run changelog`     | Generate the changelog       |
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+Create a feature or fix branch from `develop`:
 
 ```bash
 git checkout develop
 git pull origin develop
-git checkout -b feat/your-awesome-feature
-
+git checkout -b feat/your-feature
 ```
 
-2. **Make your changes**: Write your code and ensure it passes all local checks
-   (linting, types, and tests).
+Before opening a pull request:
 
 ```bash
 npm run check
-
 ```
 
-3. **Commit your changes**: We enforce
-   [Conventional Commits](https://www.conventionalcommits.org/?utm_source=gemini).
-   Husky will verify your commit message format.
+Use Conventional Commits:
 
-4. **Commit Format:**
-
-```bash
-feat(scope): add new feature
-fix(scope): resolve bug
-chore(scope): update dependencies
-
+```text
+feat(domain): add aggregate primitive
+fix(result): correct failure handling
+refactor(events): simplify event contract
+docs(readme): improve architecture documentation
 ```
 
-5. **Submit a Pull Request (PR)**: Push your branch to GitHub and open a Pull
-   Request targeting the **`develop`** branch.
-6. **Review**: The repository owner will review your code, run pipeline tests,
-   and merge it into `develop`.
-
-_Note: The `main` branch is strictly reserved for production releases. Code
-flows from feature branches ➡️ `develop` ➡️ `main`._
-
-### Scripts
-
-| Command                 | Description                                        |
-| ----------------------- | -------------------------------------------------- |
-| `npm run build`         | Builds the TypeScript source code into `dist/`<br> |
-| `npm run typecheck`     | Checks types without emitting files                |
-| `npm run lint`          | Runs ESLint                                        |
-| `npm run format`        | Formats code with Prettier                         |
-| `npm run test`          | Runs the Vitest test suite                         |
-| `npm run test:coverage` | Runs tests and generates a coverage report         |
-
-### Code Quality (Husky & Git Hooks)
-
-This project strictly enforces code quality rules before pushing to the
-repository:
-
-- **`pre-commit`**: Runs `lint-staged` on staged files (ESLint + Prettier).
-
-- **`commit-msg`**: Checks commit messages with `commitlint` (we use
-  Conventional Commits).
-
-- **`pre-push`**: Runs type checking, linting, and testing before code leaves
-  your machine.
+Pull requests should target `develop`.
 
 ---
 
-## 🌱 Support & Appreciation
+# License
 
-Building, benchmarking, and maintaining a progressive, enterprise-ready
-open-source framework requires a massive amount of continuous dedication and
-architectural engineering.
+ISC License.
 
-If Xeno has brought value to your development workflows, helped decouple your
-core business logic, or simplified your system infrastructure layout, consider
-supporting its open-source lifecycle. Your backing directly accelerates our
-strategic roadmap.
-
-**[Read our support guidelines and find out how to help](https://www.xeno-js.it/support-us)**
-
-Thank you for being part of this decoupled open-source journey!
-
-<amp-bounce>
-</amp-bounce>
-<a href="https://www.buymeacoffee.com/xenojs" target="_blank">
-<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42" style="height: 42px !important;" />
-</a>
-
----
-
-## 🛡️ Powered by Xeno
-
-If you are using Xeno in your project, let the world know! Add this badge to
-your README:
-
-```html
-<a
-  href="[https://github.com/xeno-js/xeno-js](https://github.com/xeno-js/xeno-js)"
-  target="_blank"
->
-  <img
-    src="[https://img.shields.io/badge/Powered%20by-Xeno-black?style=flat-square](https://img.shields.io/badge/Powered%20by-Xeno-black?style=flat-square)"
-    alt="Powered by Xeno"
-    height="20"
-  />
-</a>
-```
-
-## 📄 License
-
-Copyright (c) 2026 Xeno. Licensed under the
-[ISC License](https://www.google.com/search?q=LICENSE&utm_source=gemini).
+Copyright (c) 2026 Xeno.
