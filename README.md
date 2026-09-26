@@ -581,6 +581,22 @@ The transport sits around the application rather than defining it.
 
 ---
 
+## Documentation
+
+The documentation hub contains the architecture and integration guides:
+
+**[xeno-js.it](https://www.xeno-js.it/introduction)**
+
+Recommended starting points:
+
+- [Introduction](https://www.xeno-js.it/introduction)
+- [Overview](https://www.xeno-js.it/docs/shared/overview)
+- [Guards Utils](https://www.xeno-js.it/docs/shared/utils/guards)
+- [Enumerabe Utils](https://www.xeno-js.it/docs/shared/utils/enumerable)
+- [CLI](https://www.xeno-js.it/docs/cli/overview)
+
+---
+
 # Development
 
 Clone the repository:
@@ -644,6 +660,21 @@ docs(readme): improve architecture documentation
 Pull requests should target `develop`.
 
 ---
+
+## Support
+
+If Xeno is useful to you, you can support the project through the community and
+sponsorship channels documented on the website:
+
+**[Support Xeno](https://www.xeno-js.it/support-us)**
+
+---
+
+## License
+
+Copyright (c) 2026 Xeno.
+
+Licensed under the [MIT License](LICENSE).
 
 # License
 
