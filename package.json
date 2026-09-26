@@ -1,7 +1,7 @@
 {
   "name": "@xeno-js/shared",
-  "version": "0.1.7",
-  "description": "Xeno shared isomorphic package — universal primitives, DTO contracts, and type-safe utilities",
+  "version": "0.2.0",
+  "description": "Domain primitives and framework-neutral application contracts for TypeScript, including DDD, CQRS, Result types, errors, value objects, aggregates and domain events.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xeno-js/xeno-shared.git"
@@ -50,14 +50,18 @@
     "release:major": "npm version major && npm run changelog && npm run prepublishOnly && npm publish --access public"
   },
   "keywords": [
-    "shared",
-    "isomorphic",
-    "utilities",
-    "primitives",
-    "dto",
-    "helpers",
-    "clean-architecture",
-    "typescript"
+    "typescript",
+    "ddd",
+    "domain-driven-design",
+    "domain-events",
+    "aggregate-root",
+    "value-object",
+    "cqrs",
+    "application-architecture",
+    "domain-model",
+    "result",
+    "error-handling",
+    "contracts"
   ],
   "author": "Xeno",
   "license": "ISC",
@@ -67,7 +71,6 @@
   "peerDependencies": {
     "@supabase/supabase-js": "^2.117.0",
     "axios": "^1.20.0",
-    "cockatiel": "^4.0.0",
     "zod": "^4.6.5"
   },
   "peerDependenciesMeta": {
@@ -75,9 +78,6 @@
       "optional": true
     },
     "axios": {
-      "optional": true
-    },
-    "cockatiel": {
       "optional": true
     },
     "zod": {
@@ -92,7 +92,6 @@
     "@types/pg": "^8.23.1",
     "@vitest/coverage-v8": "^5.0.1",
     "axios": "^1.20.0",
-    "cockatiel": "^4.0.0",
     "conventional-changelog-cli": "^5.0.0",
     "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
