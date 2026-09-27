@@ -675,9 +675,3 @@ sponsorship channels documented on the website:
 Copyright (c) 2026 Xeno.
 
 Licensed under the [MIT License](LICENSE).
-
-# License
-
-ISC License.
-
-Copyright (c) 2026 Xeno.
