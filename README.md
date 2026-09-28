@@ -18,7 +18,7 @@
       <img src="https://img.shields.io/npm/v/@xeno-js/shared?style=flat-square" alt="npm version" />
     </a>
     <a href="https://github.com/xeno-js/xeno-shared/blob/develop/LICENSE">
-      <img src="https://img.shields.io/npm/l/@xeno-js/shared?style=flat-square" alt="License: ISC" />
+      <img src="https://img.shields.io/npm/l/@xeno-js/shared?style=flat-square" alt="License: MIT" />
     </a>
     <a href="https://buymeacoffee.com/xenojs">
       <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-FFdd00?style=flat-square&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
