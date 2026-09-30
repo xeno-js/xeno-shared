@@ -1,4 +1,4 @@
-import type { Guid, Optional } from '@/shared'
+import type { ExtendedRequest, Guid, Optional } from '@/shared'
 
 /**
  * @description NetworkContext defines the structure for network-related information used in logging and monitoring. It includes a request ID for ensuring idempotency and a client IP address for audit logging purposes.
@@ -78,7 +78,7 @@ export interface NetworkContext {
    * @since 2025-09-30
    * @link https://github.com/xeno-js/xeno-js
    */
-  readonly transport: Optional<{ req: unknown; res: unknown }>
+  readonly transport: Optional<{ req: ExtendedRequest; res: Response }>
 
   /**
    * @description The origin of the request, which can be used for logging, monitoring, or applying specific middleware logic.

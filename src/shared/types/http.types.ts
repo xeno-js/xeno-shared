@@ -216,3 +216,20 @@ export interface CookieOptions {
   /** @description Controls whether the cookie is withheld on cross-site requests, providing some protection against cross-site request forgery attacks. */
   sameSite?: Optional<'lax' | 'strict' | 'none' | boolean>
 }
+
+/**
+ * @description Represents an extended Request object that includes additional properties
+ * required by the Xeno-js framework, such as custom path handling.
+ *
+ * @author Xeno
+ * @version 1.0.0
+ * @since 2025-09-30
+ * @link https://github.com/xeno-js/xeno-js
+ */
+export interface ExtendedRequest extends Request {
+  /**
+   * @description The path of the request, which may be modified by middleware.
+   * Example: '/api/v1/user'
+   */
+  path: string
+}
