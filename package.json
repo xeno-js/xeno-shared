@@ -1,6 +1,6 @@
 {
   "name": "@xeno-js/shared",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Domain primitives and framework-neutral application contracts for TypeScript, including DDD, CQRS, Result types, errors, value objects, aggregates and domain events.",
   "repository": {
     "type": "git",

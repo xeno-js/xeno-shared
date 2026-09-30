@@ -1,7 +1,6 @@
 export * from './application/index'
 export * from './domain/index'
 export {
-  AxiosFactory,
   AxiosHttpClient,
   CacheKeyBuilder,
   InMemoryCache,
