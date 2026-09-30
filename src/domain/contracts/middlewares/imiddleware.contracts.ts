@@ -1,19 +1,18 @@
-import type { HttpMethod, ResponseDto } from '@/shared'
+import type { ExtendedRequest, ResponseDto } from '@/shared'
 
 /**
  * @description The IMiddleware interface defines the contract for middleware components that process incoming HTTP requests. Implementing classes must provide an execute method that takes an HttpRequest as input and returns a Promise of a ResponseDto, which can either be a successful response or an error response. This design allows for flexible middleware implementations that can perform various tasks such as authentication, logging, request transformation, or response generation.
-
-   * 
-   * @author Xeno
-   * @version 1.0.0
-   * @since 2025-09-30
-   * @link https://github.com/xeno-js/xeno-js 
-   */
-export interface IMiddleware<THeaders = unknown> {
+ *
+ * @author Xeno
+ * @version 1.0.0
+ * @since 2025-09-30
+ * @link https://github.com/xeno-js/xeno-js
+ */
+export interface IMiddleware {
   /**
    * @description The execute method processes an incoming HTTP request and returns a ResponseDto that can either be a successful response or an error response. This allows for flexible middleware implementations that can either modify the request, perform side effects, or generate a response directly.
-   * @param path The path of the incoming HTTP request. This allows middleware to perform actions based on the request path, such as routing, logging, or applying specific middleware logic.
-   * @param request The incoming HTTP request that the middleware will process. This object typically contains information such as the request method, URL, headers, body, and other relevant data needed for processing.
+   * @param req The request object that the middleware will process. This object typically contains information such as the request method, URL, headers, body, and other relevant data needed for processing.
+   * @param res The response object that the middleware will use to send the response back to the client. This object provides methods for setting headers, status codes, and the response body.
    * @param next A callback function that, when invoked, will pass control to the next middleware in the chain or to the final request handler. This allows for a composable middleware architecture where multiple middleware components can be chained together to process a request.
    * @returns A Promise that resolves to a ResponseDto containing either a successful response or an error response. The ResponseDto allows for handling both success and error cases in a consistent manner.
    *
@@ -23,9 +22,9 @@ export interface IMiddleware<THeaders = unknown> {
    * @since 2025-09-30
    * @link https://github.com/xeno-js/xeno-js
    */
-  execute<T>(
-    req: { method: HttpMethod; path: string; transport: { req: unknown; res: unknown } },
-    headers: THeaders,
-    next: () => Promise<ResponseDto<T>>,
-  ): Promise<ResponseDto<T>>
+  execute<TResp, TReq extends ExtendedRequest, TRes extends Response>(
+    req: TReq,
+    res: TRes,
+    next: () => Promise<ResponseDto<TResp>>,
+  ): Promise<ResponseDto<TResp>>
 }

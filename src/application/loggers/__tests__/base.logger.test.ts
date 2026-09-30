@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import type { IContextAccessor, ILoggerClient, RequestContext } from '@/domain'
-import type { Guid, LogLevel } from '@/shared'
+import type { ExtendedRequest, Guid, LogLevel } from '@/shared'
 import { LOG_LEVEL, LOG_LEVEL_NAMES } from '@/shared'
 
 import { BaseLogger } from '../base.logger'
@@ -29,8 +29,8 @@ const makeExecutionContext = (): RequestContext => ({
     formatIndicator: 'json',
     path: '/api/test',
     transport: {
-      res: '',
-      req: '',
+      req: {} as unknown as ExtendedRequest,
+      res: {} as unknown as Response,
     },
     csrf: undefined,
     csrfCookie: '',

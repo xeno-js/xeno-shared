@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo/logo.png" alt="Xeno Shared Logo" width="140" />
+  <img src="logo/logo.png" alt="Xeno.JS Shared Logo" width="140" />
 
   <h1>@xeno-js/shared</h1>
 
@@ -31,7 +31,7 @@
 ## What is `@xeno-js/shared`?
 
 `@xeno-js/shared` provides the **domain primitives and framework-neutral
-contracts** used across the Xeno ecosystem.
+contracts** used across the Xeno.JS ecosystem.
 
 It gives TypeScript applications explicit building blocks for:
 
@@ -59,9 +59,10 @@ boundary.
 
 ---
 
-## The Xeno architecture
+## The Xeno.JS architecture
 
-Xeno separates **what an application means** from **how the application runs**.
+Xeno.JS separates **what an application means** from **how the application
+runs**.
 
 ```text
 ┌─────────────────────────────────────────────┐
@@ -106,7 +107,7 @@ service
 database
 ```
 
-Xeno starts from the application model instead:
+Xeno.JS starts from the application model instead:
 
 ```text
 Domain
@@ -352,7 +353,7 @@ This distinction keeps CQRS from becoming tied to a particular transport.
 Application code often needs to represent an expected failure without turning
 every business outcome into an exception.
 
-Xeno provides `Result` primitives alongside application/domain errors.
+Xeno.JS provides `Result` primitives alongside application/domain errors.
 
 Conceptually:
 
@@ -450,7 +451,7 @@ The domain and application contracts remain the application model.
 npm install @xeno-js/shared
 ```
 
-For the complete Xeno application architecture:
+For the complete Xeno.JS application architecture:
 
 ```bash
 npm install @xeno-js/core
@@ -544,7 +545,7 @@ runtime discovery or hidden conventions.
 
 # Relationship with Xeno
 
-The Xeno ecosystem can be understood as three layers:
+The Xeno.JS ecosystem can be understood as three layers:
 
 ```text
              Your application
@@ -663,8 +664,8 @@ Pull requests should target `develop`.
 
 ## Support
 
-If Xeno is useful to you, you can support the project through the community and
-sponsorship channels documented on the website:
+If Xeno.JS is useful to you, you can support the project through the community
+and sponsorship channels documented on the website:
 
 **[Support Xeno](https://www.xeno-js.it/docs/support-us)**
 

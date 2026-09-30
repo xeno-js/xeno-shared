@@ -1,6 +1,5 @@
 export * from './auth'
 export * from './cache'
-export * from './factories'
 export * from './http'
 export * from './mappers'
 export * from './validators'
