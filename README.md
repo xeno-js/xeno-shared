@@ -518,7 +518,7 @@ separated from the domain model.
 
 The package follows a few simple principles.
 
-### Explicit contracts
+## Explicit contracts
 
 Important application boundaries should be represented by explicit TypeScript
 contracts.
@@ -586,14 +586,11 @@ The transport sits around the application rather than defining it.
 
 The documentation hub contains the architecture and integration guides:
 
-**[xeno-js.it](https://www.xeno-js.it/introduction)**
+**[xeno-js.it](https://www.xeno-js.it/docs/introduction)**
 
 Recommended starting points:
 
-- [Introduction](https://www.xeno-js.it/introduction)
-- [Overview](https://www.xeno-js.it/docs/shared/overview)
-- [Guards Utils](https://www.xeno-js.it/docs/shared/utils/guards)
-- [Enumerabe Utils](https://www.xeno-js.it/docs/shared/utils/enumerable)
+- [Introduction](https://www.xeno-js.it/docs/introduction)
 - [CLI](https://www.xeno-js.it/docs/cli/overview)
 
 ---
