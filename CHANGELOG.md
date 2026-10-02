@@ -1,4 +1,29 @@
-# [1.0.0](https://github.com/xeno-js/xeno-shared/compare/3bcc23b2aa829560f52672c3fd019a1e9c34deed...v1.0.0) (2026-09-30)
+# [2.0.0](https://github.com/xeno-js/xeno-shared/compare/v0.2.1...v2.0.0) (2026-10-02)
+
+### Bug Fixes
+
+- update changelog command
+  ([7abee89](https://github.com/xeno-js/xeno-shared/commit/7abee8961b1b18d08e71e628ee06d36451d17e96))
+- update logger test
+  ([816dfe3](https://github.com/xeno-js/xeno-shared/commit/816dfe39016c417ebfd8c4b8e3ef178e94f44757))
+
+### Features
+
+- adding signal in controller handle
+  ([6e3b3b7](https://github.com/xeno-js/xeno-shared/commit/6e3b3b7fdcc46e4fdc20ed158fb951091b00e7ae))
+- **middleware:** update execute contracts for middleware
+  ([a935d74](https://github.com/xeno-js/xeno-shared/commit/a935d74ce44d3f38f076b3f1b9d6a0db21d0140b))
+
+## [0.2.1](https://github.com/xeno-js/xeno-shared/compare/v0.2.0...v0.2.1) (2026-09-26)
+
+# [0.2.0](https://github.com/xeno-js/xeno-shared/compare/v0.1.7...v0.2.0) (2026-09-26)
+
+### Features
+
+- **domain:** introducing domain events and aggregate
+  ([7ce77ab](https://github.com/xeno-js/xeno-shared/commit/7ce77ab67f74b96d4ec39c9525ce265f7d56a813))
+
+## [0.1.7](https://github.com/xeno-js/xeno-shared/compare/3bcc23b2aa829560f52672c3fd019a1e9c34deed...v0.1.7) (2026-09-25)
 
 ### Bug Fixes
 
@@ -17,20 +42,14 @@
   ([4d18db8](https://github.com/xeno-js/xeno-shared/commit/4d18db8bb969c95f4d083b2fc75ffeb7c3fbf752))
 - adding sanitize url
   ([b850e41](https://github.com/xeno-js/xeno-shared/commit/b850e4104f0184c3b07e8832eed974140b8d4ebd))
-- adding signal in controller handle
-  ([6e3b3b7](https://github.com/xeno-js/xeno-shared/commit/6e3b3b7fdcc46e4fdc20ed158fb951091b00e7ae))
 - adding tsup for npm package
   ([9380ccd](https://github.com/xeno-js/xeno-shared/commit/9380ccdcf830d14482966eec74a0380217a79e1a))
-- **domain:** introducing domain events and aggregate
-  ([7ce77ab](https://github.com/xeno-js/xeno-shared/commit/7ce77ab67f74b96d4ec39c9525ce265f7d56a813))
 - expand shared infrastructure services
   ([ddf8fb6](https://github.com/xeno-js/xeno-shared/commit/ddf8fb64064127dd09b7ca7e6c086a1819686f32))
 - init
   ([3bcc23b](https://github.com/xeno-js/xeno-shared/commit/3bcc23b2aa829560f52672c3fd019a1e9c34deed))
 - introduce safe log context with pii masking
   ([6bfacd7](https://github.com/xeno-js/xeno-shared/commit/6bfacd77dbfde9db67ac877b35e1655eb7620018))
-- **middleware:** update execute contracts for middleware
-  ([a935d74](https://github.com/xeno-js/xeno-shared/commit/a935d74ce44d3f38f076b3f1b9d6a0db21d0140b))
 - removed allow origins
   ([9e99111](https://github.com/xeno-js/xeno-shared/commit/9e9911123da1cd994f075fca7cfeaffec100e582))
 - removed remote datasource
