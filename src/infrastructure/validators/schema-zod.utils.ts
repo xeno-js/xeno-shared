@@ -12,18 +12,20 @@ import { baseCommandZodSchema, baseQueryZodSchema } from './base-schema.constant
 export const ZodUtils = Object.freeze({
   /**
    * @description Creates a Zod schema for a command by extending the base command schema with additional properties.
+   * @param intent - The intent of the command.
    * @param additionalSchema - An object representing additional properties to be added to the command schema.
    * @returns A Zod schema for the command.
    */
-  createCommandSchema: (additionalSchema: z.ZodRawShape) => {
-    return baseCommandZodSchema.extend(additionalSchema).strict()
+  createCommandSchema: (intent: string, additionalSchema: z.ZodRawShape) => {
+    return baseCommandZodSchema.get(intent).extend(additionalSchema).strict()
   },
   /**
    * @description Creates a Zod schema for a query by extending the base query schema with additional properties.
+   * @param intent - The intent of the query.
    * @param additionalSchema - An object representing additional properties to be added to the query schema.
    * @returns A Zod schema for the query.
    */
-  createQuerySchema: (additionalSchema: z.ZodRawShape) => {
-    return baseQueryZodSchema.extend(additionalSchema).strict()
+  createQuerySchema: (intent: string, additionalSchema: z.ZodRawShape) => {
+    return baseQueryZodSchema.get(intent).extend(additionalSchema).strict()
   },
 })
