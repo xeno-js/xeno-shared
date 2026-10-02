@@ -27,6 +27,7 @@ const cacheableOptionsZodSchema = {
       ttl: z.number().int().positive().optional(),
       bypassCache: z.boolean().optional(),
       consistentRead: z.boolean().optional(),
+      isUserScoped: z.boolean(),
     })
   },
 }
@@ -78,6 +79,7 @@ export const baseQueryZodSchema = {
           ttl: z.ZodOptional<z.ZodNumber>
           bypassCache: z.ZodOptional<z.ZodBoolean>
           consistentRead: z.ZodOptional<z.ZodBoolean>
+          isUserScoped: z.ZodBoolean
         },
         z.core.$strip
       >

@@ -52,6 +52,7 @@ describe('ZodUtils', () => {
           ttl: 60,
           bypassCache: false,
           consistentRead: true,
+          isUserScoped: true,
         },
       })
 
@@ -62,6 +63,7 @@ describe('ZodUtils', () => {
           ttl: 60,
           bypassCache: false,
           consistentRead: true,
+          isUserScoped: true,
         })
       }
     })
