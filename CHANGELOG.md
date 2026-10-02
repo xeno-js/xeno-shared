@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/xeno-js/xeno-shared/compare/v2.0.0...v2.0.1) (2026-10-02)
+
+### Bug Fixes
+
+- adding is user scoped in schema zod utils
+  ([0e840d9](https://github.com/xeno-js/xeno-shared/commit/0e840d9232a95441a1f21af63ca849438187aec7))
+
 # [2.0.0](https://github.com/xeno-js/xeno-shared/compare/v0.2.1...v2.0.0) (2026-10-02)
 
 ### Bug Fixes
