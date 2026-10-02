@@ -664,7 +664,7 @@ Pull requests should target `develop`.
 If Xeno.JS is useful to you, you can support the project through the community
 and sponsorship channels documented on the website:
 
-**[Support Xeno](https://www.xeno-js.it/docs/support-us)**
+**[Support Xeno](https://www.xeno-js.it/support-us)**
 
 ---
 
