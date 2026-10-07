@@ -111,7 +111,7 @@ export class AxiosHttpClient implements IHttpClient {
         name: 'AxiosHttpClientException',
         cause: new AxiosError(
           `Request failed with status code ${response.status}`,
-          undefined,
+          ERROR_CODES.EXTERNAL_SERVICE_ERROR,
           response.config,
           response.request,
           response,
