@@ -2,7 +2,12 @@ import { defineConfig } from 'tsup'
 import { resolve } from 'node:path'
 
 export default defineConfig({
-  entry: ['src/index.ts'],
+  entry: [
+    'src/index.ts',
+    'src/axios.ts',
+    'src/supabase.ts',
+    'src/zod.ts',
+  ],
   format: ['esm', 'cjs'],
   target: 'es2023',
   dts: true,
@@ -21,7 +26,6 @@ export default defineConfig({
   external: [
     '@supabase/supabase-js',
     'axios',
-    'cockatiel',
     'zod',
   ],
 })

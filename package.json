@@ -1,6 +1,6 @@
 {
   "name": "@xeno-js/shared",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Domain primitives and framework-neutral application contracts for TypeScript, including DDD, CQRS, Result types, errors, value objects, aggregates and domain events.",
   "repository": {
     "type": "git",
@@ -19,6 +19,21 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./axios": {
+      "types": "./dist/axios.d.ts",
+      "import": "./dist/axios.js",
+      "require": "./dist/axios.cjs"
+    },
+    "./supabase": {
+      "types": "./dist/supabase.d.ts",
+      "import": "./dist/supabase.js",
+      "require": "./dist/supabase.cjs"
+    },
+    "./zod": {
+      "types": "./dist/zod.d.ts",
+      "import": "./dist/zod.js",
+      "require": "./dist/zod.cjs"
     }
   },
   "files": [
@@ -43,7 +58,7 @@
     "verify:commit": "npm run lint-staged && npm run test",
     "verify:push": "npm run check",
     "prepare": "husky",
-    "changelog": "npx --no conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "prepublishOnly": "npm run check && npm run build",
     "release:patch": "npm version patch && npm run changelog && npm run prepublishOnly && npm publish --access public",
     "release:minor": "npm version minor && npm run changelog && npm run prepublishOnly && npm publish --access public",
