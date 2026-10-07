@@ -58,7 +58,7 @@
     "verify:commit": "npm run lint-staged && npm run test",
     "verify:push": "npm run check",
     "prepare": "husky",
-    "changelog": "npx --no conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "prepublishOnly": "npm run check && npm run build",
     "release:patch": "npm version patch && npm run changelog && npm run prepublishOnly && npm publish --access public",
     "release:minor": "npm version minor && npm run changelog && npm run prepublishOnly && npm publish --access public",

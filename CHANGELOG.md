@@ -1,3 +1,5 @@
+# [3.0.0](https://github.com/xeno-js/xeno-shared/compare/v2.0.1...v3.0.0) (2026-10-07)
+
 ## [2.0.1](https://github.com/xeno-js/xeno-shared/compare/v2.0.0...v2.0.1) (2026-10-02)
 
 ### Bug Fixes
