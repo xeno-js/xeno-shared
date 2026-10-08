@@ -1,9 +1,18 @@
-# [3.0.0](https://github.com/xeno-js/xeno-shared/compare/v2.0.1...v3.0.0) (2026-10-07)
+# [3.1.0](https://github.com/xeno-js/xeno-shared/compare/v4.0.0...v3.1.0) (2026-10-08)
+
+### Features
+
+- adding base handler
+  ([d5aea2e](https://github.com/xeno-js/xeno-shared/commit/d5aea2e3cf8f9c811e71e9791ae3e6a1098b67f3))
+
+# [4.0.0](https://github.com/xeno-js/xeno-shared/compare/v3.0.0...v4.0.0) (2026-10-07)
 
 ### Bug Fixes
 
 - update script changelog
   ([c5e03a8](https://github.com/xeno-js/xeno-shared/commit/c5e03a812a7099fa4c1390146fcfb727c66cc1d5))
+
+# [3.0.0](https://github.com/xeno-js/xeno-shared/compare/v2.0.1...v3.0.0) (2026-10-07)
 
 ## [2.0.1](https://github.com/xeno-js/xeno-shared/compare/v2.0.0...v2.0.1) (2026-10-02)
 
